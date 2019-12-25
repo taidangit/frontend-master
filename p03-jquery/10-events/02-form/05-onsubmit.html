@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Form events</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(e) {
+        $("#appForm").submit(function(e) {
+            return true;
+        });
+    });
+</script>
+
+</head>
+
+<body>
+	<center>
+    	<h1>Form events</h1>
+    	<h3>onblur - onchange - onfocus - onreset - onselect - onsubmit</h3>
+    </center>
+	
+    <div id="boxA" class="boxA">
+    	<form name="appForm" id="appForm" method="post" action="process.php" enctype="multipart/form-data">
+        	<ul class="list">
+            
+                <li>                	
+                    <input type="submit" name="submit" value="Send" class="input" />
+                </li>
+               
+            </ul>        	
+        </form>
+    </div>
+    
+</body>
+</html>

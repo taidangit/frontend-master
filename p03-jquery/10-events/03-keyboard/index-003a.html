@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<title>Keyboard events</title>
+<script type="text/javascript">
+	window.onload = function(){
+		var content = document.appForm.content;
+		
+		content.onchange = content.onkeyup = function(){
+			var charLength = document.getElementById("charLength");	
+			console.log(this);
+			if(this.value.length >=0){
+				this.value = this.value.substr(0,100);
+			}
+			charLength.innerText = this.value.length;
+		}
+	}
+</script>
+</head>
+<body>
+<h1>Keyboard event</h1>
+	<form name="appForm" method="post" action="" enctype="multipart/form-data" class="boxA">
+    <label>Content:</label>
+    <br />
+    <textarea name="content" cols="58" rows="8" class="input"></textarea>
+    <br />Giới hạn là 100 ký tự 
+    (Số ký tự hiện thời <span id="charLength">0</span>)    
+    </form>
+    
+</body>
+</html>

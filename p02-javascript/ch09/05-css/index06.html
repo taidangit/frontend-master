@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 06</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/functions.js"></script>
+<script type="text/javascript">
+		
+	function process() {
+		var boxA=document.getElementById("boxA");
+	
+		var cssBoxA=getStyleElement(boxA);
+		var vOuterWidth=parseInt(cssBoxA.borderLeftWidth)+
+						parseInt(cssBoxA.paddingLeft)+
+						parseInt(cssBoxA.width)+
+						parseInt(cssBoxA.paddingRight)+
+						parseInt(cssBoxA.borderRightWidth);
+		
+		var vOuterHeight=parseInt(cssBoxA.borderTopWidth)+
+						parseInt(cssBoxA.paddingTop)+
+						parseInt(cssBoxA.height)+
+						parseInt(cssBoxA.paddingBottom)+
+						parseInt(cssBoxA.borderBottomWidth);
+		
+		
+		var txt="";
+		txt+="Outerwidth: "+vOuterWidth+"px";
+		txt+="<br/> OuterHeight: "+vOuterHeight+"px";
+		
+		var boxInfo=document.getElementById("info");
+		boxInfo.innerHTML=txt;
+	}
+	
+	
+</script>
+</head>
+
+<body>
+	<div id="boxA" class="boxA color" style="color:red;">
+    	css object
+    </div>
+    <input class="button" type="button" id="process" value="process" onclick="process();"/>
+    <div id="info" class="boxA"></div>
+</body>
+</html>

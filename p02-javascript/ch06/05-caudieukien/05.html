@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 05</title>
+
+<script type="text/javascript">
+	
+	var myNumber=5;
+	var myString="Hello";
+	var myBoolean=true;
+	var myObject={};
+	var myArray=[];
+	var myUndefined=undefined;
+	var myNull=null;
+	
+	function myTypeOf(obj) {
+		var type=typeof obj;
+		
+		if(type!="object") {
+			return type;
+		} else if(obj instanceof Array) {
+			return "array";
+		} else if(obj == null) {
+			return "null";
+		} else {
+			return "object";
+		}
+	}
+	
+	document.write(myNumber+":"+myTypeOf(myNumber)+"<br/>");
+	document.write(myString+":"+myTypeOf(myString)+"<br/>");
+	document.write(myBoolean+":"+myTypeOf(myBoolean)+"<br/>");
+	document.write(myObject+":"+myTypeOf(myObject)+"<br/>");
+	document.write(myArray+":"+myTypeOf(myArray)+"<br/>");
+	document.write(myUndefined+":"+myTypeOf(myUndefined)+"<br/>");
+	document.write(myNull+":"+myTypeOf(myNull)+"<br/>");
+
+	
+</script>
+</head>
+
+<body>
+</body>
+</html>

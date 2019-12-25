@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Attributes</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(e) {
+			
+		$("#process").click(function(e) {
+			//$('<p class="item">Somthing</p>').insertBefore("#boxA :last");
+			
+			//$('<p class="item">Somthing</p>').insertBefore(document.getElementById("asp"));
+			
+			$('<p class="item">Somthing</p>').insertBefore($("#asp"));
+			
+			
+        });
+	
+      
+    });
+	
+</script>
+
+</head>
+
+<body>
+
+   <center>
+    	<h1>
+        	.insertBefore(target): selector or element or jQuery obj
+       </h1>
+    </center>
+    
+    <div id="boxA" class="boxA">
+        <p class="item"><strong>1. HTML</strong></p>
+        <p class="item abc">2. CSS</p>
+        <p class="item">3. JavaScript</p>
+        <p class="item">4. jQuery</p> 
+        <p class="item bg02">5. PHP</p> 
+    </div>  
+    
+    <div id="boxB" class="boxA">
+    	
+        <p id="asp" class="item">6. ASP</p>
+    
+    </div>
+    
+    
+    
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+    
+</body>
+</html>

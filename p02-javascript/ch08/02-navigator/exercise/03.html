@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Exercise 03</title>
+
+<script type="text/javascript">
+
+	var enter="<br/>";
+	
+	function checkPlugin(pluginName){
+		var isExist = false;
+		var listPlugins = navigator.plugins;
+		var patt	= new RegExp(pluginName, "igm");
+		for(x in listPlugins){
+			if(patt.test(listPlugins[x].name)) {
+				isExist = true;
+				break;
+			}
+		}
+		return isExist;
+	}
+	
+	var flag = checkPlugin("shockwave flash");
+	if(flag) {
+		document.write("Tìm thấy");
+	} else {
+		document.write("Không tìm thấy");
+	}
+	
+</script>
+</head>
+
+<body>
+</body>
+</html>

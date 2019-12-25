@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 03</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript">
+	
+	
+	document.onclick=function() {
+		var e=event || window.event;
+		console.log(e);
+		
+		if(typeof(e.pageX)=="undefined") {//IE
+			var pageX=e.clientX+document.documentElement.scrollLeft;
+			var pageY=e.clientY+document.documentElement.scrollTop;
+		} else {
+			var pageX=e.pageX;
+			var pageY=e.pageY;
+		}
+		
+		
+		
+		var t="clientX: "+e.clientX+
+			"<br/> clientY: "+e.clientY+
+			"<br/> pageX: "+pageX+
+			"<br/> pageY: "+pageY;
+		
+		var boxA=document.getElementById("boxA");
+		boxA.innerHTML=t;
+	}
+	
+	/*
+	window.onload=function() {
+		var boxA=document.getElementById("boxA");
+		boxA.onclick=function() {
+			alert("Hello Obama!");
+		}
+	}
+	*/
+	
+	
+	
+</script>
+</head>
+
+<body>
+	<h1 style="text-align:center;">Events</h1>
+    <div class="boxA" id="boxA" style="width:1500px;">
+    	Event is difficult
+    </div>
+    
+</body>
+</html>

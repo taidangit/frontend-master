@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Exercise 01</title>
+
+<script type="text/javascript">
+
+	var enter="<br/>";
+	//Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+	//Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0
+	//Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; InfoPath.3; rv:11.0) like Gecko
+	function detectBrowser(){
+		var userAgent	=	navigator.userAgent;
+		var browser = {
+						"Chrome" 	: "Google Chrome",
+						"MSIE" 		: "Internet Explorer",
+						"Firefox" 	: "Firefox",
+						"Safari" 	: "Safari",
+						"Opera" 	: "Opera"
+					};
+		for(x in browser){
+			var patt = new RegExp(x, "igm");
+			if(patt.test(userAgent)) {
+				return browser[x];
+				break;
+			}
+		}
+	}
+	
+	document.write(detectBrowser());
+</script>
+</head>
+
+<body>
+</body>
+</html>

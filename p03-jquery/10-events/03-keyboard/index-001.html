@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<title>Keyboard events</title>
+<script type="text/javascript">
+	/*window.onload = function(){
+		var t = ""; //keycode
+		var t1 = "";//char
+		// keydown - keyup - keypress
+		document.onkeydown = function(){
+			var e = event || window.event;
+			console.log(e);	
+			var numberDiv 	= document.getElementById("number");			
+			t += " " + e.keyCode;
+			numberDiv.innerHTML = t;
+			
+			var charDiv 	= document.getElementById("char");
+			t1 += " " + String.fromCharCode(e.keyCode);
+			charDiv.innerHTML = t1;
+		}
+	}*/
+	
+	$(document).ready(function(e) {
+        $(document).keydown(function(e) {
+            console.log(e);
+			$("#number").text($("#number").text() + " " + e.keyCode);
+			
+			$("#char").text($("#char").text() + " " + String.fromCharCode(e.keyCode) );
+        });
+    });
+</script>
+</head>
+<body>
+	<center>
+    	<h1>Keyboard event</h1>
+    </center>
+	
+	<div id="number" class="boxA">Keycode: </div>
+    <div id="char" class="boxA">Char: </div>
+</body>
+</html>

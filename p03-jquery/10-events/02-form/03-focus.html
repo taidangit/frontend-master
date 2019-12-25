@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Form events</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	/*window.onload = function(){
+		var elemts = document.appForm.elements;
+		console.log(elemts);
+		for(var i=0; i<elemts.length; i++){
+			var els = elemts[i];
+			//if(els.tagName == "INPUT"){
+				els.addEventListener("focus",function(){ focusElemt(this);},false);
+				els.addEventListener("blur",function(){ blurElemt(this);},false);
+			//}
+		}
+				
+	}
+	
+	function focusElemt(els){
+		els.style.setProperty("background-color","#CFC");
+	}
+	
+	function blurElemt(els){
+		els.style.removeProperty("background-color");	
+	}*/
+	
+	$(document).ready(function(e) {
+       
+		var inputs = $("#appForm :input");
+		
+		inputs.focus(function(e){
+				$(this).css("background-color", "#CFC");
+			}).blur(function(e) {
+                $(this).css("background-color", "");
+            });
+    });
+</script>
+
+</head>
+
+<body>
+	<center>
+    	<h1>Form events</h1>
+    	<h3>onblur - onchange - onfocus - onreset - onselect - onsubmit</h3>
+    </center>
+	
+    
+    <div id="boxA" class="boxA">
+    	<form name="appForm" id="appForm" method="post" action="process.php" enctype="multipart/form-data">
+        	<ul class="list">
+            	<li>
+                	<label>Tài khoản:</label>
+                    <input type="text" name="username" class="input txtShort"/>
+                </li>
+                <li>
+                	<label>Mật khẩu:</label>
+                    <input type="text" name="password" class="input txtShort" />
+                </li>
+                <li>
+                	<label>Email:</label>
+                    <input type="text" name="email" class="input txtShort" />
+                </li>
+                 <li>
+                	<label>Content:</label>
+                    <textarea name="content" cols="58" rows="6" class="input"></textarea>
+                </li>
+            </ul>        	
+        </form>
+    </div>
+    
+</body>
+</html>

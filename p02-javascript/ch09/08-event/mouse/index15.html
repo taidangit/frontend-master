@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 15</title>
+<link rel="stylesheet" type="text/css" href="css/style-014.css"/>
+<script type="text/javascript" src="js/moveElement.js"></script>
+
+<script type="text/javascript">
+
+	var xB, yB;
+	window.onload=function() {
+		
+		document.onclick=function() {
+			var e=event||window.event;
+			xB=e.pageX;
+			yB=e.pageY;
+			
+			var boxA=document.getElementById("boxA");
+			
+			var xBoxA=boxA.offsetLeft;
+			var yBoxA=boxA.offsetTop;
+		
+		
+			var positionObj={xA: xBoxA, yA: yBoxA, xB: xB, yB: yB};
+		
+			var moveObj=new moveElement(positionObj);
+		
+			moveObj.setMoveSize(5);
+			moveObj.setSpeed(10);
+			moveObj.run(boxA);
+		}
+	}
+	
+</script>
+</head>
+
+<body>
+	<h1 style="text-align:center;">Events</h1>
+    <div class="boxA" id="parentA" style="height:250px;">
+    	<div id="boxA" class="boxA2">Box A</div>
+    </div>
+    
+    
+    
+</body>
+</html>

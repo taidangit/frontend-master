@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Exercise 03</title>
+<script type="text/javascript">
+	
+	var enter = "<br />";
+	
+	function changeHyp(){
+		var str 	= document.getElementById("text").innerHTML;
+		var patt 	= /jquery/igm;
+		str = str.replace(patt,"<a href='http://www.zend.vn'>JavaScript</a>");
+		document.getElementById("text").innerHTML = str;
+	}
+</script>
+
+<style type="text/css">
+	* {
+		margin:0;
+		padding:0;
+	}
+	
+	#content {
+		width: 500px;
+		height: 300px;
+		margin: 20px auto;
+		border: 2px solid #CCC;
+		text-align: center;
+		padding: 10px;
+	}
+	
+	input[type=button]{
+		padding: 4px 10px;
+		display: block;
+		margin: 10px auto;
+	}
+	
+	#content #text{
+		text-align: justify;
+		list-style: inside;
+		line-height: 24px;
+	}
+</style>
+	
+</script>
+</head>
+
+<body>
+	<div id="content">
+    	<ul id="text">
+        	<li>JQuery được xây dựng dựa trên nền tảng của ngôn ngữ lập trình Javascript</li>
+			<li>JQuery giúp các lập trình viên đơn giản được cách viết mã javascript</li>
+			<li>Làm đoạn mã Javascript viết sử dụng JQuery có thể chạy tốt trên mọi trình duyệt khác nhau.</li>
+			<li>Hỗ trợ nhiều phương thức hữu ích và ngắn gọn</li>
+			<li>JQuery là một phần không thể thiếu cho bất kỳ website vào thời điểm này và tương lai.</li>
+        </ul>
+    </div>
+    <input type="button" value="Insert hyberlink" onclick="changeHyp();"/>
+</body>
+</html>

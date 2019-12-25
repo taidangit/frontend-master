@@ -1,0 +1,14 @@
+/* CSS Document */
+
+.boxA {
+	width: 500px;
+	height: 230px;
+	border: 3px solid #ccc;
+	padding: 20px;
+	margin: 20px auto;
+}
+
+.title {
+	color: blue;
+}
+

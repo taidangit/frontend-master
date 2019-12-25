@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Deferred Object</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(e) {
+		
+		
+		$("#process").click(function(e) {
+			var deferred=$.Deferred();
+			console.log(deferred);
+			
+			var book = {
+						title: "jQuery Master"
+						};
+			
+			deferred.done(function(val1, val2){
+				$("#info").html("================done()================<br/>").append(val1+"-"+val2+"-"+this.title);
+			});
+			
+			deferred.resolveWith(book, [100, 200]);//chay nhung ham nam trong ham done()			
+			
+			
+    	});
+	});
+	
+</script>
+
+</head>
+
+<body>
+	
+    <center>
+    	<h1>
+          deferred.resolveWith(context[,args]) 
+       </h1>
+    </center>
+    
+    <div id="info" class="info"></div>
+   	
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+    
+    
+</body>
+</html>

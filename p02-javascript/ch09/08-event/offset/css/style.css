@@ -1,0 +1,54 @@
+/* CSS Document */
+*{
+	margin: 0px;
+	padding: 0px;	
+}
+
+.button{
+	padding: 3px 5px;	
+	border: solid 1px #666;
+}
+
+.info{
+	width: 300px;
+	border: solid 1px #666;
+	padding: 10px;
+	margin: 10px auto;	
+}
+
+.boxA{
+	width: 800px;
+	border: solid 3px #F00;
+	padding: 10px;
+	margin: 20px auto;	
+}
+
+.boxB{
+	width: 500px;
+	border: solid 3px #F90;
+	padding: 10px;
+	margin: 20px;	
+}
+
+.boxC{
+	width: 300px;
+	border: solid 3px #00F;
+	padding: 10px;
+	margin: 20px 0px 20px 40px;	
+}
+
+.move{
+	height: 50px;
+	width: 50px;
+	background-color: #090;
+	left: 0px;
+	top: 0px;
+	z-index: 1001;
+	position: absolute;		
+	opacity: 0.5;
+}
+
+
+
+
+

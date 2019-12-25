@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 05</title>
+<script type="text/javascript">
+
+	/*
+	URL:gia tri mac dinh about:blank
+	name:
+	  _blank
+	  _parent
+	  _self
+	  _top
+	  _name
+	 specs
+	 replace 
+	 	true thay the tai lieu hien tai trong danh sach lich su
+		false khong thay the
+	*/
+	
+	var newWin="";
+	function callOpen() {
+		var outHeight=window.outerHeight;
+		var outWidth=window.outerWidth;
+		var top=(outHeight-500)/2;
+		var left=(outWidth-400)/2;
+		
+		var specs="width=400";
+		specs+=",height=500";
+		specs+=",top="+top;
+		specs+=",left="+left;
+		
+		newWin=window.open("","New window", specs);
+		newWin.document.write("This is a test "+newWin.name);
+	}
+	
+	function callClose() {
+		if(newWin != "") {
+			if(newWin.closed) {
+				alert("Cua so da dong");
+			} else {
+				newWin.close();
+			}
+			
+		} else {
+			alert("Cua so chua duoc mo");
+		}
+		
+	}
+</script>
+
+
+</head>
+
+<body>
+
+	<input type="button" value="open window" onclick="callOpen();" />
+    <input type="button" value="close window" onclick="callClose();" />
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 01</title>
+
+<style type="text/css">
+
+	.boxA {
+		width:500px;
+		height:150px;
+		border:1px solid #ccc;
+		padding:10px;
+		margin:20px auto;
+	}
+
+</style>
+
+<script type="text/javascript">
+	window.onload=function() {
+		var boxA=document.getElementById("boxA");
+		console.log(boxA.childNodes);
+		var nodText=boxA.childNodes[0];
+		console.log(nodText);
+		console.log(nodText.nodeValue);
+		console.log(nodText.data);
+		console.log(nodText.length);
+	}
+	
+</script>
+</head>
+
+<body>
+	<div id="boxA" class="boxA">ZendVN group</div>
+</body>
+</html>

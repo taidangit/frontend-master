@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jquery Basic</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/xml.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(e) {
+		
+		var a, b;
+		
+		a=$("#boxA .item");
+		console.log(a);
+		console.log(a+"");
+		
+		$("#process").click(function(e) {
+			b=$.makeArray(a);
+			console.log(b);
+		
+			console.log(b.reverse());
+		});
+		
+		
+		
+    });
+	
+	
+	
+</script>
+
+</head>
+
+<body>
+	<h1 style="text-align:center;">jQuery.makeArray(object)</h1>
+    
+    <div id="boxA" class="boxA">
+    	<div class="item">1.HTML</div>
+        <div class="item">2.CSS</div>
+        <div class="item">3.JS</div>
+        <div class="item">4.JQuery</div>
+    </div>
+    
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+</body>
+</html>

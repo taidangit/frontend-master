@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<title>Keyboard events</title>
+<script type="text/javascript">
+	window.onload = function(){
+		var txtMoney = document.appForm.money;
+		var t = "Nhập số tiền vào đây...";
+		if(txtMoney.value == ""){
+			txtMoney.value = t;
+			txtMoney.style.color = "#ccc";	
+		}
+		
+		txtMoney.onclick = function(){
+			this.style.backgroundColor = "#FFC";	
+			if(this.value == t){
+				this.value = "";
+			}
+			txtMoney.style.color = "#000";	
+		}
+		
+		txtMoney.onkeyup = function(){
+			var vMoney = this.value;
+			vMoney = vMoney.replace(/[^\d]+/g,'');
+			
+			var vNewMoney = "";
+			if(vMoney.length > 3){
+				
+				var x = 1;
+				for(var i = vMoney.length - 1; i>=0; i--){
+					//console.log("phantu[" + i + "] = " + vMoney[i]);
+					vNewMoney = vNewMoney + "" + vMoney[i];
+					if(x%3 == 0){
+						vNewMoney = vNewMoney + ".";
+					}
+					x++;
+					
+				}
+				console.log(vNewMoney);
+				
+				var tmp = "";
+				for(var i=vNewMoney.length-1; i>=0; i--){
+					tmp = tmp + "" + vNewMoney[i];
+				}
+				
+				vNewMoney = tmp.replace(/^[\.]/g,'');
+				
+				console.log(tmp);
+			}else{
+				vNewMoney = vMoney;
+			}
+			
+			this.value = vNewMoney;
+			
+		}
+	}
+</script>
+</head>
+<body>
+<h1>Keyboard event</h1>
+	<form name="appForm" method="post" action="" enctype="multipart/form-data" class="boxA">
+    <label>Money:</label>
+    <br />
+    <input type="text" name="money" class="input" value="" />
+    </form>
+    
+</body>
+</html>

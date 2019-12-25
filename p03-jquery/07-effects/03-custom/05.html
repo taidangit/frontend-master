@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Effects - Custom</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(e) {
+		
+		var leftStart, topStart;
+		setPosition("#boxA");
+		
+		$(document).click(function(e) {
+			
+			$("#boxA").animate({
+				left: e.pageX,
+				top: e.pageY	
+			}, "slow", "swing");
+		});
+		
+		$("#reset").click(function(e) {
+			$(document).unbind("click");
+			$("#boxA").animate({
+				left: leftStart,
+				top: topStart	
+			}, "slow", "swing");
+			
+		});
+		
+		
+		function setPosition(obj) {
+			var off=$(obj).offset();
+			console.log(off);
+			$(obj).css({
+				
+				left: off.left,
+				top: off.top,
+				position: "absolute",
+				margin: "0px"
+			});
+			leftStart=off.left;
+			topStart=off.top;
+		}
+	
+      
+    });
+	
+</script>
+
+</head>
+
+<body>
+
+   <center>
+    	<h1>
+        	.animate(properties[,duration][,easing][,complete])
+       </h1>
+    </center>
+    
+    <div id="info" class="info"></div>
+    
+   
+    
+   
+    <input type="button" class="button" id="reset" value="Reset"/>
+    
+
+    
+    <div id="boxA" class="box bg02" style="margin:20px auto;">
+       My box
+    </div>  
+</body>
+</html>

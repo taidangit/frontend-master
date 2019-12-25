@@ -1,0 +1,16 @@
+
+
+.createBox(@height: 50px, @color: #f9f7f4 ){
+	height: @height * 2;
+	line-height: @height;
+	background-color: #50a0be;
+	color: @color;
+}
+
+.class1{
+	.createBox(100px);	
+}
+
+.class2{
+	.createBox(200px, yellow);	
+}

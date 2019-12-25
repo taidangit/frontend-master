@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 06</title>
+<script type="text/javascript">
+
+	//cach 02
+	this.myvalidate2=function(value1, value2) {	
+		this.data=value1;//Public
+		this.message=value2;//Public
+		var private="Private test";//Private
+		//phuong thuc
+		this.getData=getData;
+		
+		function getData() {
+			return this.data;
+		}
+		
+		//phuong thuc
+		this.getMsg=getMsg;
+		function getMsg() {
+			return this.message;
+		}
+		
+		this.getPrivate=getPrivate;
+		function getPrivate() {
+			return private;
+		}
+		
+		this.setData=setData;
+		
+		function setData(val) {
+			this.data=val
+		}
+	}
+	
+	var myObj=new myvalidate2("javascript", 500);
+	
+	document.write("Properties:"+myObj.data+"<br/>");
+	myObj.setData("jquery")
+	document.write("Properties:"+myObj.data+"<br/>");
+	
+	
+	
+</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Exercise 01</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript">
+	 function newFile(){
+		 var btnAddFile = document.getElementById("addFile");
+		 var fileUpload = btnAddFile.previousSibling;
+		
+		 console.log(fileUpload);
+		 
+		 if(fileUpload.nodeName == "#text"){
+			 fileUpload = fileUpload.previousSibling;
+		 }
+		 
+		 console.log(fileUpload);
+		 
+		 var newFileUpload = fileUpload.cloneNode(true);
+		 console.log(newFileUpload);
+		 
+		 var frmUpload = document.getElementById("uploadForm");
+		 console.log(frmUpload);
+		 frmUpload.insertBefore(newFileUpload,btnAddFile);
+		 
+		 
+	 }
+</script>
+</head>
+
+<body>
+	<form name="uploadForm" id="uploadForm" method="post" action="upload.php" enctype="multipart/form-data">
+		<div class="row">
+    		<label>Picture:</label>
+        	<input type="file" name="upload[]">
+    	</div>
+    	<input type="button" name="addFile" id="addFile" onclick="newFile();" value="Add File">
+    	<input type="submit" name="submit" value="Upload now">
+	</form>
+
+</body>
+</html>

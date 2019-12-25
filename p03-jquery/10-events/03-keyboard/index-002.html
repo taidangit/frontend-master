@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<title>Keyboard events</title>
+<script type="text/javascript">
+	/*window.onload = function(){
+		var t = ""; //keycode
+		var t1 = "";//char
+		var boxA = document.getElementById("boxA");
+		// keydown - keyup - keypress
+		document.onkeydown = function(){
+			var e = event || window.event;
+			boxA.innerHTML = boxA.innerHTML + "onkeydow <br/>";
+		}
+		
+		document.onkeyup = function(){
+			var e = event || window.event;
+			boxA.innerHTML = boxA.innerHTML + "onkeyup <br/>";
+		}
+		
+		document.onkeypress = function(){
+			var e = event || window.event;
+			boxA.innerHTML = boxA.innerHTML + "onkeypress <br/>";
+		}
+	}*/
+	
+	$(document).ready(function(e) {
+        /*$(document).keydown(function(e) {
+			$("#boxA").html($("#boxA").html() + "keydow <br/>");
+        }).keyup(function(e) {
+            $("#boxA").html($("#boxA").html() + "keyup <br/>");
+        }).keypress(function(e) {
+             $("#boxA").html($("#boxA").html() + "keypress <br/>");
+        });*/
+		//var obj = {cls: "bg01"}
+		$(document).keydown({cls: "bg01"},function(e){
+			console.log(e);
+			console.log(e.data.cls);
+		});
+    });
+</script>
+</head>
+<body>
+	<center>
+    	<h1>Keyboard event</h1>
+    </center>
+	<div id="boxA" class="boxA">Keycode: </div>
+    
+</body>
+</html>

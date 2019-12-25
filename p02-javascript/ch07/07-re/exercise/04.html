@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Exercise 04</title>
+<script type="text/javascript">
+	
+	var enter = "<br />";
+	
+	var email="dphattai1910@ggdrive.net";
+	var patt = /^[a-z][a-z0-9_\.]{2,32}@[a-z0-9\-]{3,}(\.[a-z]{2,4}){1,2}$/;
+	
+	var result;
+	if(patt.test(email)) {
+		result="Hop le";
+	} else {
+		result="Khong hop le";
+	}
+	
+	document.write(email+": "+result);
+</script>
+
+</head>
+
+<body>
+	 
+</body>
+</html>

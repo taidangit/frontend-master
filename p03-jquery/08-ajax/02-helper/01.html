@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Effects - Sliding</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(e) {
+			
+		$("#process").click(function(e) {
+			/*var obj={
+				title: "jQuery Master", 
+				author: "Khanh Pham"
+				};
+				*/
+			var str, url;
+			//str=$.param(obj);
+			//console.log(str);
+			//url="files/file-001/php?t="+Math.random()+"&"+str;
+			//console.log(url);
+			
+			var obj={	book1:{
+							title: "jQuery Master", 
+							author: "Khanh Pham"},
+						book2: {
+							title: "PHP", 
+							author: "Khanh Pham"}
+				
+					};
+			
+			str=$.param(obj, false);
+			str2=$.param(obj, true);
+			console.log(str);
+			console.log(str2);
+			
+			
+			
+			
+			
+			
+			
+			
+			
+        });
+	
+      
+    });
+	
+</script>
+
+</head>
+
+<body>
+	<center>
+    	<h1>
+          .jQuery.param(obj) | jQuery.param(obj, traditional)
+       </h1>
+    </center>
+    
+    <div id="info" class="info"></div>
+   
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+    
+</body>
+</html>

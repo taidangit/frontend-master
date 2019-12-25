@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 02</title>
+<script type="text/javascript">
+
+	var myProcess;
+	
+	function beginWrite() {
+		
+		document.getElementById("content").innerHTML+="Hello <br/>";
+		myProcess=setTimeout("beginWrite()", 1000);
+	}
+	
+	function stopWrite() {
+		clearTimeout(myProcess);
+	}
+</script>
+</head>
+
+<body>
+	<input type="button" value="start" onclick="beginWrite();"/>
+    <input type="button" value="stop" onclick="stopWrite();"/>
+    <div id=content>
+    	
+    </div>
+</body>
+</html>

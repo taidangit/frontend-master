@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/xml.js"></script>
+
+<script type="text/javascript">
+	
+	
+	
+	window.onload=function() {
+		var btnProcess = document.getElementById("process");
+		btnProcess.onclick = function(){
+			
+			var xmlDOM = loadFile("files/01-books.xml","GET","xml");
+			
+			var str = '';
+			var books = xmlDOM.getElementsByTagName("book");
+			console.log(books);
+			for(var i=0; i<books.length; i++){
+				var book = books[i];
+				
+				
+				var title = book.getElementsByTagName("title")[0].childNodes[0].nodeValue;				
+				str += "Title: " + title + "<br />";
+				
+				var author = book.getElementsByTagName("author")[0].childNodes[0].nodeValue;	
+				str += "Author: " + author + "<br />";	
+				
+				var page = book.getElementsByTagName("pages")[0].childNodes[0].nodeValue;	
+				str += "Page: " + page + "<br />";	
+				
+				var weight 	= book.getElementsByTagName("weight")[0].childNodes[0].nodeValue;
+				var units 	= book.getElementsByTagName("weight")[0].getAttribute("units");	
+				str += "Weight: " + weight + units + "<br />";
+				
+				var price 	= book.getElementsByTagName("price")[0];	
+				console.log(price); 
+				
+				var real 	= price.getElementsByTagName("real")[0].childNodes[0].nodeValue;
+				var saleoff = price.getElementsByTagName("saleoff")[0].childNodes[0].nodeValue;
+				str += "Real price: " + real + "<br />";
+				str += "Saleoff price: " + saleoff + "<br />";
+				
+				var ship 	= book.getElementsByTagName("shipping")[0];	 
+				var US 		= ship.getElementsByTagName("US")[0].childNodes[0].nodeValue;
+				var EU		= ship.getElementsByTagName("EU")[0].childNodes[0].nodeValue;
+				var VN		= ship.getElementsByTagName("VN")[0].childNodes[0].nodeValue;
+				str += "Shipping to US: " + US + "<br />";
+				str += "Shipping to EU: " + EU + "<br />";
+				str += "Shipping to VN: " + VN + "<br />";
+				
+				str += "<br />===========================<br />";	
+				
+			}
+			var boxA = document.getElementById("boxA");
+			boxA.innerHTML = str;
+			
+			
+		}
+	}
+
+</script>
+</head>
+
+<body>
+
+	<div id="boxA" class="boxA">
+    </div>
+    
+   <div style="text-align: center; padding: 5px;">
+    	<input type="button" id="process" name="process" class="button" value="Process" />
+    </div>
+</body>
+</html>

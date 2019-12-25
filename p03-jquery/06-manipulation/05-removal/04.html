@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Dom Insertion Around</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(e) {
+			
+		$("#process").click(function(e) {
+			//$("#boxA .abc").unwrap();
+			
+			if($(".item.abc").parent().is("div")) {//true
+				$(".item.abc").unwrap();//loai bo phan tu bao boc
+			}
+			
+			
+        });
+	
+      
+    });
+	
+</script>
+
+</head>
+
+<body>
+
+   <center>
+    	<h1>
+        	.unwrap()
+       </h1>
+    </center>
+    
+    <div id="boxA" class="boxA">
+        <p class="item">1. HTML</p>
+        <p class="item abc">2. CSS</p>
+        <p class="item">3. JavaScript</p>
+        <p class="item">4. jQuery</p> 
+        <p class="item bg02">5. PHP</p> 
+    </div>  
+    
+    <div id="boxB" class="boxA">
+    	
+        <p id="asp" class="item">6. ASP</p>
+    
+    </div>
+    
+    
+    
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+    
+</body>
+</html>

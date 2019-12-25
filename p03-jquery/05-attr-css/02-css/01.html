@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Attributes</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(e) {
+			
+		$("#process").click(function(e) {
+			$("#boxA").addClass("bg02");
+			
+			$("#boxB > *").addClass(function(i, val) {
+			
+				if(i%2 == 0) {
+					return "bg01";
+				} else { 
+					return "bg02";
+				}
+			});
+        });
+      
+    });
+	
+</script>
+
+</head>
+
+<body>
+	<center>
+    	<h1>
+        	.addClass(className) | .addClass(funtion(index,currentClass))
+       </h1>
+    </center>
+    
+    <div id="boxA" class="boxA bg01" title="jQuery course" style="font-size: 18px;">
+    	The jQuery course of ZendVN group
+    </div>
+    
+    <div id="boxB" class="boxA">
+    	<p class="item" title="HTML course">1. HTML</p>
+        <p class="item" title="CSS course">2. CSS</p>
+        <p class="item" title="Javascript course">3. JavaScript</p>
+        <p class="item" title="jQuery course">4. jQuery</p>  
+    </div>
+            
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+    
+</body>
+</html>

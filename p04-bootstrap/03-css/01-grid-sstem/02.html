@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../less/style.less">
+  
+</head>
+
+<body>
+    
+    <!--
+		Offsetting columns: Định dạng cho màn hình Medium device 
+ 		01. Tạo 2 cột left và right với left có class col-md-3, right có class col-md-7. Left và right cách nhau khoảng cách là col-md-2
+ 		02. Tạo cột main có class col-md-6, cách bìa trái col-md-3 và bìa phải col-md-3
+ 		03. Canh giữa
+	-->
+    
+    <div class="container">
+    
+    	<div class="row my-row">
+        	<div class="col-md-3" style="background-color:#F00;">Left</div>
+            <div class="col-md-7 col-md-offset-2" style="background-color:#0F0;">Right</div>
+        </div>
+        
+        <div class="row my-row">
+        	<div class="col-md-3 col-md-offset-2" style="background-color:#FF0;">Left</div>
+        
+        </div>
+        
+        <div class="row my-row">
+        	<div class="col-md-6 col-md-offset-3" style="background-color: #00F;">Center</div>
+        
+        </div>
+        
+    </div>
+
+    
+</body>
+</html>

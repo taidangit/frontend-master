@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DOM Element Method</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(e) {
+			
+		$("#boxA").scroll(function(e) {
+           
+			//$("#info").html("Ban dang di chuyen thanh cuon");
+			
+			var tmp="Left|Top: "+$(this).scrollLeft()+"|"+$(this).scrollTop();
+		
+			$("#info").html(tmp);
+        });
+	});
+	
+</script>
+
+</head>
+
+<body>
+	
+    <center>
+    	<h1>
+          .scroll(handle(evetObject)) | .scroll([eventData], handle(eventObject)) | scroll()      
+       </h1>
+    </center>
+    
+    <div id="info" class="info"></div>
+   	
+     <div id="boxA" class="boxA" style="overflow:auto;">
+     	This is a header
+        <div style="height:1000px; width:1000px; background:#FCC"></div>
+        This is a footer
+     </div>
+     
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+    
+    
+</body>
+</html>

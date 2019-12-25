@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 01</title>
+
+<script type="text/javascript">
+	
+	//luu cookie
+	
+	function setCookie() {
+		var fullName=document.getElementById("fullname").value;
+		if(fullName != "") {
+			var now=new Date();
+			now.setMonth(now.getMonth()+1);
+			
+			
+			document.cookie="fullname="+escape(fullName)+"; expires="+now.toUTCString;
+			
+			alert("cookie da duoc ghi thanh cong!");
+		} else {
+			alert("Khong duoc rong");
+		}
+	}
+	
+	function getCookie() {
+		if(document.cookie.length>0) {
+			var cookies=document.cookie;
+			arrCookies=cookies.split(";");
+			
+			for(var i=0;i<arrCookies.length;i++) {
+				var temp=arrCookies[i].split("=");
+			
+				var name=temp[0];
+				var value=unescape(temp[1]);
+			
+				alert("name:"+name+"- value:"+value);
+			
+			}
+		} else {
+			alert("Cookie chua duoc thiet lap");
+		}
+		
+		function deleteCookie(name) {
+			document.cookie = name+'=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+		}
+	}
+</script>
+
+
+</head>
+
+<body>
+	<input type="text" name="fullname" id="fullname"/>
+    <input type="button" value="set cookie" onclick="setCookie();"/>
+     <input type="button" value="Get cookie" onclick="getCookie();"/>
+      <input type="button" value="Delete cookie" onclick="deleteCookie('fullname');"/>
+</body>
+</html>

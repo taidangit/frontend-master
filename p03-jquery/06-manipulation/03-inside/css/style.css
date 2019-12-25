@@ -1,0 +1,106 @@
+/* CSS Document */
+
+*{
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+.clr{
+	clear: both;	
+}
+
+.left{
+	float: left;	
+}
+
+.input{
+	padding: 3px;
+	border: solid 1px #333;	
+}
+
+.button{
+	font-size: 12px;
+	padding: 3px;
+	border: solid 1px #333;	
+}
+
+.boxA{
+	width: 600px;
+	padding: 10px;
+	margin: 20px auto;
+	border: solid 2px #F00;	
+}
+
+.boxA div{
+	padding: 3px;	
+}
+
+.item{
+	border: solid 1px #999;
+	padding: 3px;
+	margin-bottom: 5px;	
+	display:block;
+}
+
+.item h2{
+	font-size: 16px;	
+}
+
+.item p{
+	padding: 4px 10px;
+}
+
+.bg01{
+	background-color: #FF9;	
+}
+
+.bg02{
+	background-color: #CFC;
+}
+
+.box{
+	height: 100px;
+	width: 100px;
+	padding: 5px;
+	margin: 5px auto;
+	border: 3px solid #F00;	
+}
+
+.move{
+	width: 70px;
+	height: 70px;
+	border: 3px solid #F90;	
+	background-color: #FFC;
+}
+
+.borderA{
+	width: 450px;
+	padding: 5px;
+	margin: 5px auto;
+	border: 3px solid #F00;	
+}
+
+.borderB{
+	
+	padding: 5px;
+	margin: 5px auto;
+	border: 3px solid #396;	
+}
+
+.borderC{
+	
+	padding: 5px;
+	margin: 5px auto;
+	border: 3px solid #F90;	
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 06</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript">
+
+	function validateForm() {
+		var txtKeywords=document.appForm.keywords;
+		if(txtKeywords.value.length<3) {
+			alert("Tu khoa phai it nhat 3 ky tu");
+			return false;
+		}
+		
+		var radEngine=document.appFrom.engine;
+		var flag=false;
+		var engine="none";
+		
+		for(var i=0;i<radEngine.length;i++) {
+			if(radEngine[i].checked) {
+				engine=radEngine[i].value;
+				if(engine!="none") {
+					flag=true;
+					break;
+				}
+			}
+		}
+		
+		if(!flag) {
+			alert("Vui long chon 1 may tim kiem");
+			return false;
+		} else {
+			switch (engine) {
+				case "google":
+					doument.appForm.action="http://google.com";
+					break;
+				case "yahoo":
+					doument.appForm.action="http://yahoo.com";
+					break;
+				case "bring":
+					doument.appForm.action="http://bring.com";
+					break;
+			}
+		}
+		return false;
+		
+	}
+	
+	
+	
+</script>
+</head>
+	
+<body>
+	<h1>Form Event</h1>
+    <div id="boxA" class="boxA">
+    
+    	<form name="appForm" method="get" action="process.php" enctype="multipart/form-data" onsubmit="return validateForm();">
+        	<ul class="list">
+                <li>
+					<label>keywords:</label>                
+                    <input type="text" name="keywords" value="" class="input txtMedium"/>
+                </li>
+                 <li>
+					<label>Search engine:</label>                
+                    <input type="radio" name="engine" value="none" />None
+                     <input type="radio" name="engine" value="google"  />Google
+                      <input type="radio" name="engine" value="yahoo" />Yahoo
+                       <input type="radio" name="engine" value="bring" />Bring
+                </li>
+                <li>
+                	
+                    <input type="submit" name="submit" value="send" class="input txtShort"/>
+                </li>
+               
+            </ul>
+        </form>
+    </div>
+</body>
+</html>

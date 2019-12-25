@@ -1,0 +1,254 @@
+/* CSS Document */
+
+/*=====================NAVIGATION=======================*/
+body {
+	background:url(../07-rwd/images/bodyBg.png) repeat 0 0;
+}
+
+
+.container {
+	background: url(../07-rwd/images/headerbg.png) repeat 0 0;
+	padding: 0px;
+}
+#navigation {
+	margin-top: 30px;
+	background: none;
+}
+
+#navigation h1 {
+	margin: 0px;
+}
+
+#navigation a.navbar-brand {
+	font-weight: 700;
+	line-height: 1.3em;
+	font-size: 28px;
+	padding: 10px 15px;
+	color: #000;
+}
+
+#navigation button.navbar-toggle {
+	background-color: #FE5214;
+}
+
+#navigation button.navbar-toggle span.icon-bar{
+	background-color: #fff;
+}
+
+nav.navbar {
+	margin-bottom:0px;
+}
+
+#navigation ul.nav>li>a {
+	background-color: #f9f9f9;
+	margin: 2px;
+	border-radius: 4px 4px 0 0;
+	text-shadow: 0 0 0 #000;
+}
+
+#navigation ul.nav>li>a:hover {
+	color: #FE5214;
+}
+
+#navigation ul.nav>li.active>a {
+	background-color: #d33800;
+}
+
+#navigation ul.nav>li>a:focus {
+	color: inherit;
+}
+
+#navigation ul.nav li ul.dropdown-menu {
+	border-radius: 4px;
+}
+
+#navigation ul.nav li ul.dropdown-menu li a:hover {
+	border-radius: 4px;
+	color: #fff;
+	background-color: #d33800;
+}
+
+@media all and (max-width:500px) {
+	#navigation ul.nav>li>a {
+		padding: 6px 8px;
+		font-weight: 700;
+	}
+	#my-carousel .carousel-caption {
+		background-color: transparent !important;
+	}
+}
+
+@media all and (max-width:999px) {
+	#navigation ul.nav li ul.dropdown-menu {
+		margin: 0 40px
+	}
+	#navigation ul.nav li ul.dropdown-menu li a {
+		padding: 2px 4px;
+		font-weight: 700;
+	}
+	#navigation ul.nav li ul.dropdown-menu li a:hover {
+		border-radius: 4px;
+		color: #fff;
+		background-color: #d33800;
+	}
+}
+
+/*=====================CAROUSEL=======================*/
+#slideSection {
+	
+}
+
+#my-carousel .carousel-inner {
+	background-color: #000;
+}
+
+#my-carousel .carousel-inner .item img {
+	max-height: 290px;
+	margin: 0 auto
+}
+
+#my-carousel .carousel-caption {
+	max-width: 40%;
+	text-align: left;
+	background-color: #7d1603;
+	padding: 1%;
+	border-radius: 14px;
+	position: absolute;
+	top: 20%;
+	left: 10%;
+}
+
+#my-carousel .carousel-caption h2 {
+	position: absolute;
+	top: 2%;
+	left: 2%
+}
+
+#my-carousel .carousel-caption p {
+	position: absolute;
+	top: 35%;
+	left: 2%
+}
+
+#my-carousel .carousel-caption a.btn {
+	position: absolute;
+	bottom: 10%;
+	left: 2%
+}
+
+/*=====================WHAT WE DO=======================*/
+#fieldSection {
+	
+}
+
+div.title {
+	text-align: center;
+	margin: 30px auto;
+}
+
+div.title h3 {
+	font-weight: 700;
+}
+
+.col-md-2 .well {
+	padding:0px;
+	text-align: center;
+	height: 135px;
+}
+
+.col-md-2 .well h4 {
+	height: 80px;
+	background: url(../07-rwd/images/blockRepeat.png) repeat-x 0 #fff;
+	border-bottom: 1px solid #ccc;
+}
+
+.col-md-2 .well h4:hover {
+	cursor: pointer;
+}
+
+.col-md-2 .well h4 i {
+	font-size: 2em;
+	display: block;
+	color: #FE5214;
+}
+
+.col-md-2 .well a, .col-md-2 .well a:hover{
+	color: #FE5214;
+}
+
+.col-md-2 .well h4 span {
+	font-weight: 700;
+}
+
+.col-md-2:hover {
+	background: url(../07-rwd/images/smallShadows.png) no-repeat center 135px;
+}
+
+.popover-title {
+	color: #FE5214;
+}
+
+/*=====================OUT RECENT WORK=======================*/
+	#workSection {
+		background: url(../07-rwd/images/shadowsReverse.png) no-repeat center top;
+		padding: 30px 0;
+		text-align: center;
+	}
+	
+	#workSection .row h3 {
+		color: #FE5214;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+
+  	#workSection .thumbnail:hover {
+		box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+	}
+	
+	.col-md-4 .thumbnail h4 {
+		margin: -4px -4px 4px 0;
+		line-height: 44px;
+		background: url(images/blockRepeat.png) repeat-x 0 0;
+		border-bottom: 1px solid #ccc;	
+	}
+/*=====================BANNER=======================*/
+
+#bannerSection {
+	text-align: center;
+	padding: 48px 0;
+}
+
+#bannerSection a {
+	margin: 0 8px;
+}
+
+#bannerSection a img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+	padding: 2px;
+	border: 1px solid #ddd;
+}
+
+/*=====================FOOTER=======================*/
+
+#footerSection {
+	background: url(../07-rwd/images/footerbg.png) repeat 0 0;
+	color: #fff;
+	padding: 28px 10px;
+	border-top: 1px solid #FE5214;
+}
+
+#footerSection .newsletter h4, #footerSection .latest-news h4,#footerSection .contact h4,#footerSection .contact h5,#footerSection .newsletter h5 {
+	font-weight: 700;
+	margin: 30px 0 10px 10px;
+}
+
+#footerSection .latest-news ul.media-list li.media .media-body h5 {
+	font-weight: 700;
+}
+
+#footerSection .latest-news ul.media-list li.media .media-body p {
+	font-size: 14px;
+}

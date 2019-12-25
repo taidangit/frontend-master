@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/01.css" />
+<script type="text/javascript" src="js/functions.js"></script>
+<script type="text/javascript">
+
+	
+	function copyStyle() {
+		var boxA = document.getElementById("boxA");
+		var boxAParent=boxA.parentNode;//parentElement
+		
+		console.log(boxAParent.style);
+		console.log(boxAParent.style.cssText);//  style="padding:3px; border:2px solid red; margin-bottom:10px;"
+		var boxB = document.getElementById("boxB");
+		boxB.style.cssText=boxAParent.style.cssText;
+	}
+
+</script>
+</head>
+
+<body>
+	<input id="copy" type="button" value="Copy gia tri cua style" onclick="copyStyle();" />
+    
+    <div id="boxB" >
+    	Box B
+    </div>
+    
+	<div style="padding:3px; border:2px solid red; margin-bottom:10px;">
+    	<div id="boxA" class="boxA" >
+    		Box A
+    	</div>
+    </div>
+    
+    
+	 
+</body>
+</html>

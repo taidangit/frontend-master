@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Effects - Custom</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(e) {
+			
+		$("#process").click(function(e) {
+/*			$("#boxA").animate({
+				width: "400",
+				height: "200"
+					
+			}, 2000, "swing", function() {
+				$("#info").text("Kich thuoc cua doi tuong da thay doi");
+			});
+	*/			
+			
+			/*
+			$("#boxA").animate({
+				width: "70%",
+				height: "300"
+					
+			}, 2000, "swing", function() {
+				$("#info").text("Kich thuoc cua doi tuong da thay doi");
+			});
+				*/
+				
+				
+			$("#boxA").animate({
+				width: "toggle",
+				height: "toggle"
+					
+			}, 2000, "swing", function() {
+				$("#info").text("Kich thuoc cua doi tuong da thay doi");
+				});
+			
+        });
+	
+      
+    });
+	
+</script>
+
+</head>
+
+<body>
+
+   <center>
+    	<h1>
+        	.animate(properties[,duration][,easing][,complete])
+       </h1>
+    </center>
+    
+    <div id="info" class="info"></div>
+    
+    <div id="boxA" class="box">
+       My box
+    </div>  
+    
+    
+    
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+    
+</body>
+</html>

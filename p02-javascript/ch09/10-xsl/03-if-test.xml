@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="03-if-test.xsl"?>
+
+<book>
+	<title>Lap trinh Jquery</title>
+	<author>ZendVM Group</author>
+	<page>500</page>
+	<weight units="gam">400</weight>
+</book>

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Form events</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	/*function getInfo(obj){
+		console.log(obj.selectedIndex);
+		var val = obj.value;
+		var optSelected = obj.options[obj.selectedIndex];
+		
+		
+		var txtCode = document.appForm.code;
+		txtCode.value = val +  " | " + optSelected.text;
+	}*/
+	
+	$(document).ready(function(e) {
+       var city = $("#appForm select[name='city']");
+	   
+	   	city.change(function(e) {
+        	
+			var opt = $(this).find(":selected");
+			console.log(opt);
+			$("#appForm :text[name='code']").val(opt.val() + " | " + opt.text());
+    	});
+	   
+    });
+</script>
+
+</head>
+
+<body >
+	<center>
+    	<h1>Form events</h1>
+    <h3>onblur - onchange - onfocus - onreset - onselect - onsubmit</h3>
+    </center>
+	
+    
+    <div id="boxA" class="boxA">
+    	<form name="appForm" id="appForm" method="post" action="process.php" enctype="multipart/form-data">
+        	<ul class="list">
+            	<li>
+                	<label>City:</label>
+                    <select name="city" class="input txtShort" >
+                    	<option value="hcm">TP. Hồ Chí Minh</option>
+                        <option value="hn">Hà Nội</option>
+                        <option value="dn">Đà Nẵng</option>
+                        <option value="ct">Cần Thơ</option>
+                    </select>
+                </li>
+                <li>
+                	<label>Value:</label>
+                    <input type="text" name="code" class="input txtShort" />
+                </li>
+               
+            </ul>        	
+        </form>
+    </div>
+    
+</body>
+</html>

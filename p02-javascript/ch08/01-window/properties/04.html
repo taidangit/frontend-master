@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 04</title>
+
+</head>
+
+<body>
+	<iframe src="http://www.zend.vn"></iframe>
+    <iframe src="http://www.zend.vn"></iframe>
+    <iframe src="http://www.zing.vn"></iframe>
+    
+    <script type="text/javascript">
+
+		console.log(window.frames);
+	
+		for(var x=0;x<frames.length; x++){
+			frames[x].location="http://www.zend.vn";
+		}
+	</script>
+    
+</body>
+</html>

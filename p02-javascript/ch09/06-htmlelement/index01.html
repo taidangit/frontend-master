@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 01</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript">
+		
+	function process() {
+		var boxA=document.getElementById("boxA");
+		
+		var boxInfo=document.getElementById("info");
+		
+		var txt="";
+		txt+="childNodes: "+boxA.childNodes;//Nodelist bao gom ca node text
+		txt+="<br/> childdren: "+boxA.children;//khong bao gom node text
+		txt+="<br/> className: "+boxA.className;
+		txt+="<br/> dir: "+boxA.firstChild.nextSibling.dir;
+		txt+="<br/> document: "+document;
+		txt+="<br/> id: "+boxA.id;
+		
+		txt+="<br/> innerHTML: "+boxA.innerHTML;
+		txt+="<br/> innerText: "+boxA.innerText;
+		txt+="<br/> style: "+boxA.style.cssText;
+		txt+="<br/> title: "+boxA.title;
+		
+		boxInfo.innerHTML=txt;
+		
+		//boxInfo.style.filter="alpha(opacity=40)";//IE
+		//boxInfo.style.opacity="0.4";//Chrome
+	}
+	
+</script>
+</head>
+
+<body>
+	<div id="boxA" class="boxA" style="color:#00F;" title="this is a text">
+    	<div dir="rtl">1.HTML</div>
+        <div>2.CSS</div>
+        <div>3.JS</div>
+        <div>4.JQUERY</div>
+    </div>
+    
+    <input class="button" type="button" value="process"id="process" onclick="process();"/>
+    
+    <div id="info" class="boxA" style="height:300px;"></div>
+</body>
+</html>

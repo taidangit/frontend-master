@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 05</title>
+<script type="text/javascript" src="js/functions.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/myCssElement2.js"></script>
+<script type="text/javascript">
+		
+	function process() {
+		var boxA=document.getElementById("boxA");
+		
+		var boxInfo=document.getElementById("info");
+		
+		var cssBoxA=new myCssElement(boxA);
+		
+		
+		var txt="";
+		txt+="outerWidth: "+cssBoxA.outerWidth();
+		
+		txt+="<br/> outerHeight: "+cssBoxA.outerHeight();
+		
+		txt+="<br/> innerHeight: "+cssBoxA.innerHeight();
+		
+		txt+="<br/> innerWidth: "+cssBoxA.innerWidth();
+		
+		txt+="<br/> position: "+cssBoxA.position("max").left+
+								"|"+cssBoxA.position("max").top;
+		
+		boxInfo.innerHTML=txt;
+		
+		
+		var boxC=document.getElementById("boxC");
+		boxC.style.position="absolute";
+		boxC.style.left=cssBoxA.position("max").right+"px";
+		boxC.style.top=cssBoxA.position("max").bottom+"px";
+		
+		boxC.style.zIndex=1000;
+		
+	}
+	
+</script>
+<style type="text/css">
+	
+</style>
+</head>
+
+<body>
+	<div id="boxA" class="boxA">
+    	<div>1.HTML</div>
+        <div>2.CSS</div>
+        <div>3.JS</div>
+        <div>4.JQUERY</div>
+        <div>5.JQUERY</div>
+        <div>6.JQUERY</div>
+        <div>7.JQUERY</div>
+    </div>
+    
+    <input class="button" type="button" value="process"id="process" onclick="process();"/>
+    
+    <div id="info" class="boxA"></div>
+    
+    <div id="boxC" class="boxC"></div>
+</body>
+</html>

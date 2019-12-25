@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 08</title>
+<script type="text/javascript" src="js/functions.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style-008.css"/>
+<script type="text/javascript" src="js/myCssElement2.js"></script>
+<script type="text/javascript">
+		
+	var t;
+	function process() {
+		var boxA=document.getElementById("boxA");
+	
+		var firstNode=boxA.children[0];
+		
+		var cssFirstNode=new myCssElement(firstNode).cssStyle();
+		var heightFirstNode=parseInt(firstNode.offsetHeight)+parseInt(cssFirstNode.marginBottom);
+		
+		boxA.scrollTop+=3;
+		
+		if(boxA.scrollTop >= heightFirstNode) {
+			boxA.appendChild(firstNode);
+			boxA.scrollTop=0;
+		}
+		
+		t=setTimeout(process, 100);
+		
+	}
+	
+	function topMove() {
+		clearTimeout(t);
+	}
+	
+</script>
+<style type="text/css">
+	
+</style>
+</head>
+
+<body>
+	<div id="boxA" class="boxA">
+    	<div class="item">
+        	<h2>1. Khóa học Zend Framework 1.X</h2>
+            <div>
+            	Lorem ipsum dolor sit amet, consectetur 
+                adipisicing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua
+            </div>
+        </div>
+        <div class="item">
+        	<h2>2. Lập trình jQuery (jQuery Master)</h2>
+            <div>
+            	Lorem ipsum dolor sit amet, consectetur 
+                adipisicing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua
+            </div>
+        </div>
+        <div class="item">
+        	<h2>3. Lập trình Joomla! 2.5</h2>
+            <div>
+            	Lorem ipsum dolor sit amet, consectetur 
+                adipisicing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua
+            </div>
+        </div>
+        <div class="item">
+        	<h2>4. Thiết kế web với Dreamweaver</h2>
+            <div>
+            	Lorem ipsum dolor sit amet, consectetur 
+                adipisicing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua
+            </div>
+        </div>
+        <div class="item">
+        	<h2>5. Thiết kế web với Joomla! v2.5</h2>
+            <div>
+            	Lorem ipsum dolor sit amet, consectetur 
+                adipisicing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua
+            </div>
+        </div>
+        <div class="item">
+        	<h2>6. Xây dựng website bán hàng với Joomla</h2>
+            <div>
+            	Lorem ipsum dolor sit amet, consectetur 
+                adipisicing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua
+            </div>
+        </div>
+    </div>
+    
+    <center>
+    	<input type="button" value="process" id="process" class="button" onclick="process();"/>
+     	<input type="button" value="stop" id="top" class="button" onclick="topMove();"/>
+    </center>
+</body>
+</html>

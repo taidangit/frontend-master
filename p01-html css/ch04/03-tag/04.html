@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tab 04</title>
+<style type="text/css">
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.clr {
+		clear: both;
+	}
+	
+	.right {
+		border:2px solid #999;
+		padding:20px;
+		width:600px;
+		margin:30px auto;
+	}
+	
+	#tabD .tab-box {
+		border: 1px solid #999;
+		margin-top: -1px;
+	}
+	
+	#tabD .tab-box > a {
+	
+		display:block;
+		background: url(images/tabD/arrow-right.png) 5px center no-repeat;
+		padding: 5px 0 5px 30px;
+		font-weight: bold;
+		text-decoration: none;
+		color: #000;
+	}
+	
+	#tabD .tab-box > a:hover, #tabD .current > a  {
+		background: url(images/tabD/arrow-down.png) 5px center no-repeat;
+		color: #00F;
+	}
+	
+	#tabD .tab-box > div {
+		display: none;
+	}
+	
+	
+	#tabD .current > div {
+		display: block;
+		padding: 10px;
+		text-align: justify;
+		border-top: 1px solid #999;
+	}
+</style>
+
+
+</head>
+
+<body>
+	<div class="right">
+    	<div id="tabD">
+        	<div class="tab-box">
+            	<a href="#">PHP Script</a>
+                <div>PHP script. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+            </div>
+            <div class="tab-box">
+            	<a href="#">ASP Script</a>
+                <div>ASP script. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+            </div>
+            <div class="tab-box current">
+            	<a href="#">JSP Script</a>
+                <div>JSP script. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

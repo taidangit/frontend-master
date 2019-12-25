@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Form Elements</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(e) {
+			
+		$("#appForm :disabled").val("Textbox da bi khoa");
+		$("#appForm :enabled").val("Textbox co the nhap lieu");
+		
+		$("#process").click(function(e) {
+			$("#appForm :disabled").removeAttr("disabled");//loai bo thuoc tinh disabled
+			
+			
+        });
+      
+    });
+	
+</script>
+
+</head>
+
+<body>
+	<center>
+    	<h1>Form elements</h1>
+    </center>
+    
+    <form id="appForm" name="appForm" class="boxA" method="post" action="" enctype="multipart/form-data">
+    	<div>
+        	Username: 
+            <input type="text" name="username" class="input" disabled="disabled"/>
+        </div>
+        <div>
+       		 Email: 
+             <input type="text" name="email" class="input"/>        
+        </div>
+        
+        
+    </form>
+    
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+</body>
+</html>

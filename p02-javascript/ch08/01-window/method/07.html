@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 07</title>
+<script type="text/javascript">
+
+	var newWin1;
+	var newWin2;
+	
+	function open1() {
+		newWin1=window.open("","", "width=200, height=200, top=200, left=400");
+		newWin1.document.write("New Window 1");
+	}
+	
+	
+	function open2() {
+		newWin2=window.open("","", "width=250, height=300, top=300, left=600");
+		
+		newWin2.document.write("New Window 2");
+		newWin1.focus();
+		newWin1.blur();
+		newWin2.focus();
+	}
+</script>
+
+
+</head>
+
+<body>
+
+	<input type="button" value="open window 1" onclick="open1();" />
+    <input type="button" value="open window 2" onclick="open2();" />
+</body>
+</html>

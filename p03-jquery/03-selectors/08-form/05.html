@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Form Elements</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(e) {
+		
+		$("#checkAll").click(function(e) {
+			checkAll();
+			
+        });
+		
+		$("#unCheckAll").click(function(e) {
+			unCheckAll();
+			
+        });
+      
+    });
+	
+	function checkAll() {
+		var checks=$("#appForm :checkbox[name='programming']");
+		
+		$.each(checks, function() {
+			
+			//$(this).attr("checked", "checked");
+			
+			$(this).prop("checked", "checked");//DOM
+			
+		});
+	}
+	
+	
+	function unCheckAll() {
+		var checks2=$("#appForm :checkbox[name='programming']");
+		
+		$.each(checks2, function() {
+			
+			//$(this).removeAttr("checked");
+			$(this).prop("checked", false);
+			
+		});
+	}
+	
+</script>
+
+</head>
+
+<body>
+	<center>
+    	<h1>Form elements</h1>
+    </center>
+    
+    <form id="appForm" name="appForm" class="boxA" method="post" action="" enctype="multipart/form-data">
+    	
+         <input type="checkbox" name="programming" class="input" value="javascript"/> Javascript
+        <br />
+        
+        <input type="checkbox" name="programming" class="input" value="php"/> PHP
+        <br />
+        
+        <input type="checkbox" name="programming" class="input" value="asp"/> ASP
+        <br />
+        
+        <input type="checkbox" name="programming" class="input" value="jsp"/> JSP
+        
+        
+    </form>
+    
+    <center>
+    	<input type="button" class="button" id="checkAll" value="Check All"/>
+        <input type="button" class="button" id="unCheckAll" value="UnCheck All"/>
+    </center>
+</body>
+</html>

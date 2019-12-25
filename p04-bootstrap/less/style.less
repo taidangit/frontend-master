@@ -1,0 +1,64 @@
+@import "../less/bootstrap.less";
+
+@btn-primary-color: yellow;
+@btn-primary-bg: green;
+
+.breadcrumb > li + li:before {
+    color: #CCCCCC;
+    content: "\2660";
+    padding: 0 5px;
+} 
+
+div#scroll-able {
+    height:400px;
+    overflow:scroll;
+	border: 2px solid #ebe9f9;
+	padding: 10px;
+}
+
+
+div.row > div {
+	
+}
+
+div.my-row {
+	margin: 10px;
+}
+
+.my-table{
+	.table;
+	.table-bordered;
+	.table-striped;
+	.table-hover;
+}
+
+.my-table thead tr th {
+	.text-center;
+}
+
+.my-table tbody tr td {
+	vertical-align: middle;
+}
+
+
+.my-table td:nth-child(1) {
+	width: 5%;
+	.text-center;
+}
+
+.my-table td:nth-child(2) {
+	width: 15%;
+	.text-center;
+}
+
+.my-table td:nth-child(3) {
+	width: 80%;
+	.text-justify;
+}
+
+.my-table > tbody > tr:hover > td,
+.my-table > tbody > tr:hover > th {
+  background-color: #ebe9f9;
+}
+
+

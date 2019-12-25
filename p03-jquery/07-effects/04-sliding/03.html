@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Effects - Sliding</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(e) {
+			
+		$("#process").click(function(e) {
+				/*$("#boxA").slideToggle(1000, function() {
+				
+				$("#info").text("My box da an");
+				
+			});
+	*/		
+			$("#boxA").slideToggle(1000, "easeInOutElastic", function() {
+				
+				$("#info").text("My box da hien thi");
+				
+			});
+		
+		
+			/*
+			$("#boxA").slideToggle({
+				
+				duration: "slow",
+				easing: "swing",
+				queue: true,
+				specialEasing: {
+					width: "swing",
+					height: "linear"
+				},
+				step: function(now, tween) {
+					
+				},
+				progress:  function(animation,progress, remainingMs) {
+				
+					
+				},
+				complete: function() {
+				
+				},
+				done: function(animation, jumpedToEnd) {
+					
+				},
+				fail: function(animation, jumpedToEnd) {
+				
+				},
+				always: function(animation, jumpedToEnd) {
+				
+				}
+			});	
+			
+			*/
+        });
+	
+      
+    });
+	
+</script>
+
+</head>
+
+<body>
+
+   <center>
+    	<h1>
+        	.slideToggle([duration][, complete]) | .slideToggle([duration][,easing][, complete]) |
+            .slideToggle(options)
+       </h1>
+    </center>
+    
+    <div id="info" class="info"></div>
+    
+    <div id="boxA" class="box bg02">
+       My box
+    </div>  
+    
+    
+    
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+    
+</body>
+</html>

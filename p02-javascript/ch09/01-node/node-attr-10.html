@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/01.css" />
+<script type="text/javascript" src="js/functions.js"></script>
+<script type="text/javascript">
+
+	
+	window.onload=function() {
+		var boxA=document.getElementById("boxA");
+		console.log(boxA.nodeType);//1 elment node
+		var cls=boxA.attributes.getNamedItem("class");
+		console.log(cls.nodeType);//2 attribute node
+		
+		var txtNode=boxA.childNodes[0];
+		console.log(boxA.childNodes);
+		console.log(txtNode+" ");//text node
+		console.log(txtNode.nodeValue);// Kieu cua node
+		console.log(txtNode.nodeType);//3 text node
+	}
+</script>
+</head>
+
+<body>
+    
+	 <div id="boxA" class="BoxA">Kieu cua node</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 01</title>
+<script type="text/javascript">
+	
+	var d=new Date();
+	
+	var result="<ul>";
+	
+	result+="<li>Nam:"+d.getFullYear()+"</li>";
+	result+="<li>Thang:"+parseInt(d.getMonth()+1)+"</li>";
+	result+="<li>Ngay:"+d.getDate()+"</li>";
+	result+="<li>Thu:"+d.getDay()+"</li>";
+	result+="<li>Gio:"+d.getHours()+"</li>";
+	result+="<li>Phut:"+d.getMinutes()+"</li>";
+	result+="<li>Giay:"+d.getSeconds()+"</li>";
+	result+="<li>Mili Giay:"+d.getMilliseconds()+"</li>";
+	result+="<li>Time:"+d.getTime()+"</li>";
+	result+="<li>getTimezoneOffset:"+d.getTimezoneOffset()+"</li>";
+	result+="</ul>";
+	
+	function showResult() {
+		document.getElementById("result").innerHTML=result;
+	}
+</script>
+
+<style type="text/css">
+	
+	#result {
+		margin: 20px auto;
+		height:300px;
+		width:600px;
+		border: 2px solid #999;
+		padding:10px;
+	}
+
+	
+</style>
+</head>
+
+<body>
+ 	<input type="button" value="result" onclick="showResult();"/>
+	<div id=result>
+    
+    </div>
+   
+</body>
+</html>

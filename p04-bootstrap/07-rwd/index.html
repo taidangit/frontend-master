@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	 <title>Business LTD</title>
+  	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+  <!--<script src="../../js/less-3.9.0.min.js"></script>-->
+  
+  <style type="text/css">
+  
+  </style>
+  
+ <script type="text/javascript">
+		$(document).ready(function(e) {
+           $('[data-toggle=popover]').popover({ 
+				html 		: true,						
+				animation 	: true,					
+				placement 	: 'top',	
+				trigger 	: 'hover'
+			}).on('shown.bs.popover', function(){
+				var pos = parseInt($('.popover').css('top')) - 22 + 'px';
+				$('.popover').css('top', pos);
+			});
+			
+			$('#popover-2').popover({ 
+				html 		: true,						
+				animation 	: true,					
+				placement 	: 'top',	
+				trigger 	: 'hover',
+				content 	: function(){
+					 			return $('.popover-content').html();
+							},
+				title 		: function(){
+								 return $('.popover-title').html();
+							}
+			});
+			$('[data-toggle=tooltip]').tooltip();
+        });
+</script>
+
+</head>
+<body>
+  	
+    <div class="container">
+    	<div id="headerSection">
+        	<!--Navigation-->
+            <nav class="navbar navbar-default" role="navigation" id="navigation">
+            
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#my-navbar">
+                        <span class="sr-only">Toggle navigation</span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span>
+                    </button>
+                    <h1><a class="navbar-brand" href="#">Business <small>Ltd.</small></a></h1>
+                </div>
+        
+                <div class="collapse navbar-collapse navbar-right" id="my-navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">What we do ?</a></li>
+                        <li><a href="#">What we are ?</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Features <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Page Elements</a></li>
+                                <li><a href="#">Coming soon page</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        
+        <div id="slideSection" style="border-top: 4px solid #D33800;border-bottom: 4px solid #717171;">
+            <!--Carousel-->
+            <div id="my-carousel" class="carousel slide" data-ride="carousel">
+    
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item ">
+                        <img src="images/carousel/business_website_templates_1.jpg" alt="Image 1">
+                        <div class="carousel-caption">
+                            <h2 class="hidden-xs">What we do?</h2>
+                            <p class="hidden-sm hidden-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quae debitis recusandae ipsum consequuntur voluptate minima odio tenetur labore accusamus.</p>
+                            <a href="#" class="btn btn-lg btn-success">Read more</a>
+                        </div>
+                    </div>
+                    <div class="item active">
+                        <img src="images/carousel/business_website_templates_2.jpg" alt="Image 2">
+                        <div class="carousel-caption">
+                            <h2 class="hidden-xs">What we do?</h2>
+                            <p class="hidden-sm hidden-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quae debitis recusandae ipsum consequuntur voluptate minima odio tenetur labore accusamus.</p>
+                            <a href="#" class="btn btn-lg btn-success">Read more</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/carousel/business_website_templates_3.jpg" alt="Image 3">
+                        <div class="carousel-caption">
+                            <h2 class="hidden-xs">What we do?</h2>
+                            <p class="hidden-sm hidden-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quae debitis recusandae ipsum consequuntur voluptate minima odio tenetur labore accusamus.</p>
+                            <a href="#" class="btn btn-lg btn-success">Read more</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/carousel/business_website_templates_4.jpg" alt="Image 4">
+                        <div class="carousel-caption">
+                            <h2 class="hidden-xs">What we do?</h2>
+                            <p class="hidden-sm hidden-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quae debitis recusandae ipsum consequuntur voluptate minima odio tenetur labore accusamus.</p>
+                            <a href="#" class="btn btn-lg btn-success">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Controls -->
+                <div class="carousel-controls">
+                    <a class="left carousel-control" href="#my-carousel" data-slide="prev"> 
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a> 
+                    <a class="right carousel-control" href="#my-carousel" data-slide="next"> 
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="fieldSection">
+            <div class="row title">
+                <h3>What we do?</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit dignissimos commodi eius adipisci soluta facilis voluptatem cum repellat ut sapiente.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="well well-small">
+                        <h4 data-container="body" data-toggle="popover" data-placement="top" 
+                            data-content="> ABC <br />> DEF <br />> GEH"
+                            data-original-title="Boostrap is easy ">
+                            <i class="fa fa-magic"></i>
+                            <span>Design</span>
+                        </h4>
+                        <a href="#">view detail</a>
+                        <div class="popover-title" style="display: none;"><h3>ABC</h3></div>
+                        <ul class="popover-content" style="display: none;">
+                            <li>123</li>
+                            <li>456</li>
+                            <li>789</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="well well-small">
+                        <h4 id="popover-2">
+                            <i class="fa fa-link"></i>
+                            <span>SEO</span>
+                        </h4>
+                        <a href="#">view detail</a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="well well-small">
+                        <h4>
+                            <i class="fa fa-magic"></i>
+                            <span>Design</span>
+                        </h4>
+                        <a href="#">view detail</a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="well well-small">
+                        <h4>
+                            <i class="fa fa-magic"></i>
+                            <span>Design</span>
+                        </h4>
+                        <a href="#">view detail</a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="well well-small">
+                        <h4>
+                            <i class="fa fa-magic"></i>
+                            <span>Design</span>
+                        </h4>
+                        <a href="#">view detail</a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="well well-small">
+                        <h4>
+                            <i class="fa fa-magic"></i>
+                            <span>Design</span>
+                        </h4>
+                        <a href="#">view detail</a>
+                    </div>
+                </div>
+            </div>
+        
+       	</div>
+       
+       	<div id="workSection">
+        
+        	<div class="row">
+                <h3 style="color: #FE5214;font-weight: 700;margin-bottom: 20px;">
+                    Our Recent Work <small>view all projects (200+)</small>
+                </h3>
+                <div class="col-md-4 col-sm-4">
+                    <div class="thumbnail">
+                        <h4>Mobile Apps</h4>
+                        <a href="#"><img src="images/1.jpg" alt="bootstrap business templates"></a>
+                        <div class="caption">
+                            <p>We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets. We recently	introduce cheapest and best mobile web design packages in our services</p>
+                            <div class="btn-group">
+                                <a class="btn btn-default" href="#" data-toggle="tooltip" data-placement="right" data-original-title="send email">
+                                    <i class="fa fa-envelope"></i>
+                                </a>
+                                <a class="btn btn-default" href="#" data-toggle="tooltip" data-placement="top" data-original-title="do you like?">
+                                    <i class="fa fa-thumbs-up"></i>
+                                </a>
+                                <a class="btn btn-default" href="#" data-toggle="tooltip" data-placement="top" data-original-title="dont like?">
+                                    <i class="fa fa-thumbs-down"></i>
+                                </a>
+                                <a class="btn btn-default" href="#" data-toggle="tooltip" data-placement="top" data-original-title="share">
+                                    <i class="fa fa-link"></i>
+                                </a> 
+                                <a class="btn btn-default" href="#" data-toggle="tooltip" data-placement="left" data-original-title="browse">
+                                    <i class="fa fa-globe"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="thumbnail">
+                        <h4>Mobile Apps</h4>
+                        <a href="#"><img src="images/2.jpg" alt="bootstrap business templates"></a>
+                        <div class="caption">
+                            <p>We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets. We recently	introduce cheapest and best mobile web design packages in our services</p>
+                            <div class="btn-group">
+                                <a class="btn btn-default" href="#" data-toggle="tooltip" data-placement="right" data-original-title="send email">
+                                    <i class="fa fa-envelope"></i>
+                                </a>
+                                <a class="btn btn-default" href="#" data-toggle="tooltip" data-placement="top" data-original-title="do you like?">
+                                    <i class="fa fa-thumbs-up"></i>
+                                </a>
+                                <a class="btn btn-default" href="#" data-toggle="tooltip" data-placement="top" data-original-title="dont like?">
+                                    <i class="fa fa-thumbs-down"></i>
+                                </a>
+                                <a class="btn btn-default" href="#" data-toggle="tooltip" data-placement="top" data-original-title="share">
+                                    <i class="fa fa-link"></i>
+                                </a> 
+                                <a class="btn btn-default" href="#" data-toggle="tooltip" data-placement="left" data-original-title="browse">
+                                    <i class="fa fa-globe"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="thumbnail">
+                        <h4>Mobile Apps</h4>
+                        <a href="#"><img src="images/3.jpg" alt="bootstrap business templates"></a>
+                        <div class="caption">
+                            <p>We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets. We recently	introduce cheapest and best mobile web design packages in our services</p>
+                            <div class="btn-group">
+                                <a class="btn btn-default" href="#" data-toggle="tooltip" data-placement="right" data-original-title="send email">
+                                    <i class="fa fa-envelope"></i>
+                                </a>
+                                <a class="btn btn-default" href="#" data-toggle="tooltip" data-placement="top" data-original-title="do you like?">
+                                    <i class="fa fa-thumbs-up"></i>
+                                </a>
+                                <a class="btn btn-default" href="#" data-toggle="tooltip" data-placement="top" data-original-title="dont like?">
+                                    <i class="fa fa-thumbs-down"></i>
+                                </a>
+                                <a class="btn btn-default" href="#" data-toggle="tooltip" data-placement="top" data-original-title="share">
+                                    <i class="fa fa-link"></i>
+                                </a> 
+                                <a class="btn btn-default" href="#" data-toggle="tooltip" data-placement="left" data-original-title="browse">
+                                    <i class="fa fa-globe"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        	
+        	</div>
+      	</div>
+        
+        <div id="bannerSection">
+            <a href="#" target="_blank"> 
+                <img src="images/clients/twitterLogo.jpg" alt="business template">
+            </a> 
+            <a href="#" target="_blank">
+                <img src="images/clients/googleLogo.jpg" alt="business template">
+            </a> 
+            <a href="#" target="_blank">
+                <img src="images/clients/facebookLogo.jpg" alt="business template">
+            </a> 
+            <a href="#" target="_blank">
+                <img src="images/clients/my_web_solution.jpg" alt="business template">
+            </a>
+        </div>
+        
+        <div id="footerSection">
+			<div class="row">
+                <div class="col-md-4 newsletter">
+                    <h4>Newsletter and Subscription</h4>
+        
+                    <h5>Our aim</h5>
+                    <em>"To provide affordable web design and development services fordifferent devices is our aim, that fully meet your requirements."</em>
+        
+                    <h5>What our client say?</h5>
+                    <em>"I can confirm, bougth the theme a couple of days afo and it isreally fantastic. Very flexible, very good support. I really like it." </em> <br />
+        
+                    <h5>Subscription</h5>
+                    <form>
+                        <div class="input-append">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter your email"> 
+                                <span class="input-group-btn">
+                                    <button class="btn btn-danger" type="button">send</button>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4 latest-news">
+                    <h4>Latest news</h4>
+                    <ul class="media-list">
+                        <li class="media">
+                            <a class="pull-left" href="#"> 
+                                <img class="media-object" src="images/img64x64.png" alt="bootstrap business template">
+                            </a>
+                            <div class="media-body">
+                                <h5 class="media-heading">Why our customers satisfied?</h5>
+                                <p>To provide affordable web design and..."</p>
+                                <small><em>November 14, 2012</em> <a href="#"> More</a></small>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <a class="pull-left" href="#"> 
+                                <img class="media-object" src="images/img64x64.png" alt="bootstrap business template">
+                            </a>
+                            <div class="media-body">
+                                <h5 class="media-heading">Why our customers satisfied?</h5>
+                                <p>To provide affordable web design and..."</p>
+                                <small><em>November 14, 2012</em> <a href="#"> More</a></small>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <a class="pull-left" href="#"> 
+                                <img class="media-object" src="images/img64x64.png" alt="bootstrap business template">
+                            </a>
+                            <div class="media-body">
+                                <h5 class="media-heading">Why our customers satisfied?</h5>
+                                <p>To provide affordable web design and..."</p>
+                                <small><em>November 14, 2012</em> <a href="#"> More</a></small>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <a class="pull-left" href="#"> 
+                                <img class="media-object" src="images/img64x64.png" alt="bootstrap business template">
+                            </a>
+                            <div class="media-body">
+                                <h5 class="media-heading">Why our customers satisfied?</h5>
+                                <p>To provide affordable web design and..."</p>
+                                <small><em>November 14, 2012</em> <a href="#"> More</a></small>
+                            </div>
+                        </li>
+                    </ul>
+                
+                
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <h4>Visit us</h4>
+                    <address>
+                        <strong>
+                            <a href="#" title="business"><i class="fa fa-home"></i> Business (p.) Ltd. </a>
+                        </strong>
+                        <br> 194, Vectoria Street, Newwork
+                        <br> nw 488, USA
+                    </address>
+                    Phone: <i class="fa fa-phone"></i> 00123 456 000 789 <br>
+                    Email: <a href="#" title="contact"><i class="fa fa-envelope"></i> info@companyltd.com</a><br /> 
+                    Link: <a href="index.html" title="Business ltd"><i class="fa fa-link"></i> www.businessltd.com</a><br />
+                    
+                    <h5>Quick Links</h5>
+                    <a href="#" title="services"><i class="fa fa-cogs"></i> Services</a><br /> 
+                    <a href="#" title="about"><i class="fa fa-envelope"></i> About us</a><br /> 
+                    <a href="#" title="portfolio"><i class="fa fa-question"></i> Portfolio</a><br />
+        
+                    <h5>Find us on</h5>
+                    <div class="find-us">
+                        <a href="#"><i class="fa fa-facebook fa-2x"></i></a> 
+                        <a href="#"><i class="fa fa-twitter fa-2x"></i></a> 
+                        <a href="#"><i class="fa fa-video-camera fa-2x"></i></a> 
+                        <a href="#"><i class="fa fa-google-plus fa-2x"></i></a> 
+                        <a href="#"><i class="fa fa-rss fa-2x"></i></a>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

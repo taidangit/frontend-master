@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Mouse events</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	
+	$(document).ready(function(e) {
+    	
+		/*$("#boxA > *").bind("click", {cls:"bg01"}, function(e){
+			$(this).toggleClass(e.data.cls);	
+		});
+		*/
+		
+		/*$("#boxA > *").bind("mouseover mouseout", {cls:"bg01"}, function(e){
+			$(this).toggleClass(e.data.cls);	
+		});
+		*/
+		
+		
+		$("#boxA > *").bind({
+			click: function(e) {
+				$(this).toggleClass("bg02")
+			},
+			mouseenter: function(e) {
+				$(this).addClass("bg01")
+			},
+			mouseleave: function(e) {
+				$(this).removeClass("bg01")
+			}
+		});	
+		
+    });
+	
+	
+</script>
+
+</head>
+
+<body >
+	<center>
+    
+    	<h1>.bind(eventType [, evenData], handler(, eventobject))
+        | .bind(eventType [, evenData], preventBubble)) | .bind(events)</h1>
+    
+    </center>
+	
+    <div id="info" class="info"></div>
+    
+    <div id="boxA" class="boxA">
+    	<div>1. HTML</div>
+        <div>2. CSS</div>
+        <div>3. JS</div>
+        <div>4. jQuery</div>
+    </div>
+    
+</body>
+</html>

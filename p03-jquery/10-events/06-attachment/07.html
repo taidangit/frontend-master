@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Mouse events</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	
+	$(document).ready(function(e) {
+    	/*$("#boxA :first").on("click", function(e){
+				$(this).addClass("bg02");
+				$("#boxA :last").trigger("click");
+		});
+		
+		$("#boxA :last").on("click", function(e){
+				$(this).addClass("bg01");
+		});
+		*/
+
+		
+		//====================================
+		
+		$("#boxA :first").on("click", function(e){
+				$(this).addClass("bg02");
+				$("#boxA :last").trigger("click", ["bg01", "4.jQuery Master"]);
+		});
+		
+		$("#boxA :last").on("click", function(e, bg, txt){
+				$(this).addClass(bg).text(txt);
+		});
+		
+    });
+	
+	
+</script>
+
+</head>
+
+<body >
+	<center>
+    
+    	<h1>.trigger(eventType, [,extraParameters])
+        |.trigger(event, [,extraParameters])</h1>
+    
+    </center>
+	
+    <div id="info" class="info"></div>
+    
+    <center>
+    	<input type="button" name="off" id="off" value="Off" class="button"/>
+    </center>
+    
+    <div id="boxA" class="boxA">
+    	<span class="item">1. HTML</span>
+        <div class="item">2. CSS</div>
+        <p class="item">3. JS</p>
+        <div class="item">4. jQuery</div>
+    </div>
+    
+</body>
+</html>

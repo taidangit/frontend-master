@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<book_shop>
+	<book>
+		<title>Lap trinh Jquery</title>
+		<author>ZendVM Group</author>
+		<page>500</page>
+		<weight units="gam">400</weight>
+	</book>
+	
+	<book>
+		<title>Lap trinh PHP</title>
+		<author>ZendVM Group</author>
+		<page>700</page>
+		<weight units="gam">800</weight>
+	</book>
+	
+	<book>
+		<title>Lap trinh Zend Framework</title>
+		<author>ZendVM Group</author>
+		<page>900</page>
+		<weight units="kilo">1</weight>
+	</book>
+
+</book_shop>
+

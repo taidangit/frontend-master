@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 05</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/browsers.js"></script>
+<script type="text/javascript">
+
+	
+	function process() {
+		var boxA=document.getElementById("boxA");
+		
+		boxA.setAttribute("style", "color:red; font-size:20px;");
+		
+		
+		if(checkIe7) {//IE7
+			boxA.style.cssText="color:red; font-size:20px;";
+		}
+		
+		console.log(vStyle);
+	}
+	
+</script>
+</head>
+
+<body>
+	<input type="button" id="process" value="process" onclick="process();"/>
+	<div id="boxA" class="boxA">Khoa hoc Jquery Master Online</div>
+</body>
+</html>

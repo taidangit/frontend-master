@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Menu 01</title>
+<style type="text/css">
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.right {
+		margin:30px auto;
+		width:700px;
+		border:2px solid #F00;
+		padding:20px;
+		height:250px;
+	}
+	
+	#menu ul {
+		width:200px;
+	}
+	
+	#menu ul li {
+		border: 1px solid #999;
+		list-style: url(images/blue-arrow.png) inside;
+		margin-bottom: 2px;
+		position:relative;
+	}
+	
+	#menu ul li a {
+		text-decoration: none;
+		color: #000;
+		padding-left:5px;
+		
+	}
+	
+	#menu ul li a:hover{
+		background-color:#3FF;
+		
+	}
+	
+	#menu ul ul {
+		display: none;
+	}
+	
+	#menu .show{
+		display: block;
+		position: absolute;
+		top: -1px;
+		left: 200px;
+	}
+</style>
+</head>
+
+<body>
+	<div class="right">
+    	<div id="menu">
+        	<ul>
+            	<li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#" >News</a>
+                	<ul class="show">
+                    	<li><a href="#">Tin trong nuoc</a>
+                        	<ul>
+                            	<li><a href="#">Kinh te</a></li>
+                				<li><a href="#">Chinh tri</a></li>
+                				<li><a href="#">Giao duc</a>
+                            </ul>
+                        	
+                        </li>
+                		<li><a href="#">Tin quoc te</a>
+                        	<ul  class="show">
+                            	<li><a href="#">Cong nghe</a></li>
+                				<li><a href="#">Tai chinh</a></li>
+                				<li><a href="#">Ngoai giao</a>
+                            </ul>
+                        </li>
+                		<li><a href="#">Tin trong nha</a>
+                        <li><a href="#">Tin noi bo</a>
+                        
+                    </ul>
+                </li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            
+        </div>
+    </div>
+</body>
+</html>

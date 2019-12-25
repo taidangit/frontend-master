@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 04</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript">
+
+	function process() {
+		//tao 1 phan tu div
+		var newNode=document.createElement("div");
+		newNode.setAttribute("class", "boxA");
+		newNode.setAttribute("id", "boxB");
+		newNode.setAttribute("title", "this is a text");
+		newNode.setAttribute("style", "color:red;");
+		
+		var nodeText=document.createTextNode("java script is easy");
+		newNode.appendChild(nodeText);
+		
+		var parent=document.body;
+		console.log(parent);
+		
+		parent.appendChild(newNode);
+		
+		
+	}
+	
+	
+</script>
+</head>
+
+<body>
+	
+    <input type="button" id="process" value="process" onclick="process();"/>
+    
+	<div id="boxA" class="boxA" title=""style="color:red;">
+    	Jquery Master Course
+    </div>
+    
+</body>
+</html>

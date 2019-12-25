@@ -1,0 +1,41 @@
+/* CSS Document */
+
+*{
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.boxA {
+	width: 500px;
+	border: solid 3px #F00;
+	padding: 10px;
+	margin: 20px auto;
+	overflow-x: hidden;
+	height: 200px;
+}
+
+.button{
+	font-size: 12px;
+	padding: 3px;
+	border: solid 1px #333;	
+}
+
+.item {
+	padding: 5px 10px;
+	border: solid 1px #999;
+	margin-bottom: 7px;
+	background-color: #FFC;
+	zoom: 1;
+}
+
+.item > h2 {
+	font-size: 16px;
+	color: #00F;
+	padding: 5px 0px;
+}
+
+.item > div {
+	font-size: 13px;
+}

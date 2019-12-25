@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Exercise 05</title>
+
+
+<style type="text/css">
+	* {
+		margin:0px;
+		padding:0px;
+	}
+	
+	.content {
+		text-align:center;
+		border:2px solid #999;
+		width:500px;
+		height:100px;
+		padding:15px;
+		margin:20px auto;
+	}
+	
+	.content h3{
+		color:#F00;
+		margin-bottom:20px;
+	}
+	
+	.content ul.control{
+		margin:10px;
+	}
+
+	.content ul.control li{
+		list-style:none;
+		display:inline-block;
+	}
+	
+	.content ul.control li a{
+		display:block;
+		padding:5px 8px;
+		background-color:#9C0;
+		text-decoration:none;
+	}
+	
+	.content ul.control li a:hover{
+		background-color:#0F9;
+	}
+		
+	.content input[type=text]{
+		width:150px;
+		text-align:center;
+	}
+</style>
+</head>
+
+<body>
+	
+    <div class="content">
+    	<h3>My Clock</h3>
+        <ul class="control">
+        	<li><a href="javascript:startClock();">Start</a></li>
+        	<li><a href="javascript:pauseClock();">Pause</a></li>
+            <li><a href="javascript:resetClock();">Reset</a></li>
+        </ul>
+        <input type="text" name="time" id="time" value="00:00:00"
+    onclick="beginWrite();"/>
+    </div>
+    
+    <script type="text/javascript">
+		var mili=0;
+		var sec=0;
+		var minute=0;
+		var process;
+		
+		function startClock() {
+			document.getElementById("time").value=showTime(minute)+":"+showTime(sec)+":"+mili;
+			mili++;
+			if(mili==100) {
+				sec++;
+				mili=0;	
+			}
+			
+			if(sec==60) {
+				minute++;
+				sec=0;
+			}
+			
+			process=setTimeout("startClock()", 10)
+		}
+		
+		function pauseClock() {
+			clearTimeout(process);
+		}
+		
+		function resetClock() {
+			clearTimeout(process);
+			document.getElementById("time").value="00:00:00";
+			mili=0;
+			sec=0;
+			minute=0;
+			
+		}
+		
+		function showTime(number) {
+			if(number < 10) {
+				return "0"+number;
+				
+			}
+			return number;
+		}
+	</script>
+</body>
+</html>

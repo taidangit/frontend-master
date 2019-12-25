@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Exercise 01</title>
+<script type="text/javascript">
+
+	var imgArr=new Array();
+	imgArr[0]="images/01.jpg";
+	imgArr[1]="images/02.jpg";
+	imgArr[2]="images/03.jpg";
+	imgArr[3]="images/04.jpg";
+	imgArr[4]="images/05.jpg";
+	
+	
+	function showImage() {
+		var index=Math.floor(Math.random()*imgArr.length);
+		var result='<img src="' + imgArr[index] + '" />';
+		
+		
+		document.getElementById("area-image").innerHTML=result;
+	}
+</script>
+
+<style type="text/css">
+	* {
+		margin:0;
+		padding:0;
+	}
+	
+	.content {
+		margin:10px auto;
+		text-align:center;
+		width:600px;
+		height:400px;	
+	}
+	
+	.content input[type=button] {
+		padding:3px 8px;
+		margin-bottom:10px;
+	}
+	
+	.content #area-image {
+		border:2px solid #999;
+		padding:10px;
+		display:inline-block;
+	}
+	
+</style>
+</head>
+
+<body>
+
+	<div class="content">
+    	<input type="button" value="Random Image" onclick="showImage()"/>	
+        <div id="area-image">
+        	<img src="images/01.jpg"/>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jquery Basic</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(e) {
+		
+		var defaults={
+					
+					title: "Lap trinh Jquery",
+					author: "Khanh Pham",
+					pages: 500,
+					price: 40.35,
+					shipping: {
+									us: 1.2,
+									eu:2.5,
+									vn:100
+								}
+					
+					};
+			
+		var book={
+					
+					title: "Lap trinh PHP",
+					author: "Hai Lan",
+					pages: 1000,
+					price: 42.05,
+					saleoff: 20.35,
+					shipping: {
+									us: 1.5,
+									eu:5.6,
+									vn:200
+								}
+					
+					};
+		
+		
+		$("#process").click(function(e) {
+			console.log(defaults);
+			console.log(book);
+			$.extend(true, defaults, book);
+			//newObject=$.extend({},book,defaults);
+			console.log(defaults);
+        });
+       
+		
+    });
+	
+</script>
+
+</head>
+
+<body>
+	<h1 style="text-align:center;">
+    jQuery.extend( target[, object1][, objectN])
+    jQuery.extend([deep], target[, object1][, objectN])</h1>
+    
+    <div id="boxA" class="boxA">
+    	<div class="item">1.HTML</div>
+        <div class="item">2.CSS</div>
+        <div class="item">3.JS</div>
+        <div class="item">4.JQuery</div>
+    </div>
+    
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+</body>
+</html>

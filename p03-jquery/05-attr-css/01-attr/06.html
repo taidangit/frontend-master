@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Attributes</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(e) {
+			
+		$("#process").click(function(e) {
+			console.clear();
+			
+			$("#appForm :text[name='txt']").val("Tai Dang");
+			
+			$("#appForm :password[name='pwd']").val("123456");
+			
+			$("#appForm :radio[name='sex'][value='female']").attr("checked", true);
+			
+			
+			$("#appForm :checkbox[name='prog']").val(["php", "jsp"]);
+			
+			$("#appForm textarea[name='content']").val("This is a test");
+			
+			$("#appForm select[name='city']").val("cantho");
+			
+			$("#appForm select[name='district']").val(["q3","q4","q5"]);
+			
+			
+			
+        });
+      
+    });
+	
+</script>
+
+</head>
+
+<body>
+	<center>
+    	<h1>
+        	.val() | .val(value) | .val(function(index,value))
+        </h1>
+    </center>
+    
+    <form name="appForm" id="appForm" action="" method="post" class="boxA">
+    	<div>
+        	Textbox Field: <input type="text" name="txt" class="input"/>
+        </div>
+        
+        <div>
+        	Password Field: <input type="password" name="pwd" class="input"/>
+        </div>
+        
+         <div>
+        	File: <input type="file" name="upload" class="input"/>
+        </div>
+        
+        <div>
+        	Radio Buttons: 
+            <input type="radio" name="sex" value="male">Male 
+            <input type="radio" name="sex" value="female">Female
+        </div>
+        
+        <div>
+        	Checkboxes: 
+            <input type="checkbox" name="prog" value="php"> PHP  
+			<input type="checkbox" name="prog" value="jsp"> JSP 
+        </div>
+        
+        <div>
+            Textarea: 
+            <textarea rows="4" cols="50" name="content">The jQuery course</textarea>
+        </div>
+        
+        <div>
+        	Selectbox:
+            <select name="city" class="input">
+              <option value="hanoi">Ha Noi</option>
+              <option value="tphcm">TP. Ho Chi Minh</option>
+              <option value="danang">Da Nang</option>
+              <option value="cantho">Can Tho</option>
+            </select>
+        </div>
+        
+        <div>
+        	Selectbox multi:
+            <select name="district" class="input" size="5" multiple="multiple" style="width: 200px;">
+              <option value="q1">Quận 1</option>
+              <option value="q2">Quận 2</option>
+              <option value="q3">Quận 3</option>
+              <option value="q4">Quận 4</option>
+              <option value="q5">Quận 5</option>
+              <option value="q6">Quận 6</option>
+            </select>
+        </div>
+    </form>
+	
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+    
+</body>
+</html>

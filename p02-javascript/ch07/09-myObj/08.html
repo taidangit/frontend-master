@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 08</title>
+<script type="text/javascript">
+
+	this.myBox=function() {
+		
+		//thuoc tinh
+		//this.text="";
+		//this.attr="";
+		
+		//phuong thuc
+		this.createBox=createBox;
+		//var createStyle=createStyle;
+		
+		
+		function createBox(attr, text) {
+			var result;
+			
+			//var style=createStyle(attr);
+			
+			result="<div style='"+createStyle(attr)+"'>"+text+"</div>";
+			return result;
+		}
+		
+		function createStyle(attr) {
+			var style="text-align:center; margin-top:20px";
+			
+			style+=";width: "+attr[0];
+			style+=";height: "+attr[1];
+			style+=";background: "+attr[2];
+			style+=";color: "+attr[3];
+			style+=";line-height: "+attr[1];
+			
+			return style;
+		}
+	}
+	
+	var box=new myBox();
+	document.write(box.createBox(["100px","100px", "yellow", "red"], "Box 01"));
+	document.write(box.createBox(["200px","200px", "blue", "white"], "Box 02"));
+	document.write(box.createBox(["150px","160px", "#12bb2a", "#3017e6"], "Box 03"));
+</script>
+</head>
+
+<body>
+</body>
+</html>

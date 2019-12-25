@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 02</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript">
+	
+	
+	document.onclick=function() {
+		var e=event || window.event;
+		console.log(e);
+		var t="screenX: "+e.screenX+
+				"<br/> screenY: "+e.screenY+//so voi man hinh may tinh
+				"<br/> clientX: "+e.clientX+//so voi trinh duyet
+				"<br/> clientY: "+e.clientY+
+				"<br/> pageX: "+e.pageX+//so voi document
+				"<br/> pageY: "+e.pageY+
+				"<br/> x: "+e.x+//so voi trinh duyet
+				"<br/> y: "+e.y;
+		
+		var boxA=document.getElementById("boxA");
+		boxA.innerHTML=t;
+	}
+	
+	/*
+	window.onload=function() {
+		var boxA=document.getElementById("boxA");
+		boxA.onclick=function() {
+			alert("Hello Obama!");
+		}
+	}
+	*/
+	
+	
+	
+</script>
+</head>
+
+<body>
+	<h1 style="text-align:center;">Events</h1>
+    <div class="boxA" id="boxA" style="width:1500px;">
+    	
+    </div>
+    
+</body>
+</html>

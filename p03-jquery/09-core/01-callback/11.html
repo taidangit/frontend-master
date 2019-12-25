@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Callbacks Object</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+
+<script type="text/javascript">
+	
+	$(document).ready(function(e) {
+			
+		
+		$("#process").click(function(e) {
+			//var arr=["HTML", "CSS", "JS", "jQuery"];
+			var callbacks=$.Callbacks();
+			
+			callbacks.add(addColor).fireWith($("#boxA"), ["bg01", "bg02"]);
+			
+		
+        });
+		
+		
+		var addColor = function(color1, color2) {
+			
+			$(this).find(":even").addClass(color1)
+				.end()
+				.find(":odd").addClass(color2);
+		}
+    });
+	
+</script>
+
+</head>
+
+<body>
+	
+    <center>
+    	<h1>
+          callbacks.remove(callbacks)
+       </h1>
+    </center>
+    
+    <div id="info" class="info"></div>
+   	 <div id="boxA" class="boxA">
+     	<div>1. HTML</div>
+        <div>1. CSS</div>
+        <div>1. JS</div>
+        <div>1. jQuery</div>
+     </div>
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+    
+    
+</body>
+</html>

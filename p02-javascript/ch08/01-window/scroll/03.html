@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 03</title>
+<script type="text/javascript">
+
+	function getXOffset() {
+		var xOffset=(typeof(window.pageXOffset)!="number") ? document.documentElement.scrollLeft : window.pageXOffset;
+		return xOffset;
+	}
+	
+	
+	function getYOffset() {
+		var yOffset=(typeof(window.pageYOffset)!="number") ? document.documentElement.scrollTop : window.pageYOffset;
+		return yOffset;
+	}
+	
+	function callScrollTo() {
+		window.scrollTo(200,0);
+		alert(getXOffset());
+	}
+</script>
+
+<style type="text/css">
+	*{
+		margin:0px;
+		padding:0px;
+	}
+	
+	.content {
+		width:2400px;
+		margin:10px auto;
+	}
+	
+	.content .box {
+		width:400px;
+		background-color:#0F9;
+		line-height:200px;
+		text-align:center;
+		margin-right:10px;
+		display:inline-block;
+		zoom:1;
+		*display:inline;
+	}
+	
+	.content .box a{
+		font-size:20px;
+		text-decoration:none;
+	}
+</style>
+</head>
+
+<body>
+	<div class="content">
+    	<div class="box">
+        	<a href="javascript:callScrollTo();">Scroll (position 1)</a>
+        
+        </div>
+        <div class="box">
+        	<a href="javascript:callScrollTo();">Scroll (position 2)</a>
+        
+        </div>
+        <div class="box">
+        	<a href="javascript:callScrollTo();">Scroll (position 3)</a>
+        
+        </div>
+        <div class="box">
+        	<a href="javascript:callScrollTo();">Scroll (position 4)</a>
+        
+        </div>
+        <div class="box">
+        	<a href="javascript:callScrollTo();">Scroll (position 5)</a>
+        
+        </div>
+    </div>
+   
+</body>
+</html>

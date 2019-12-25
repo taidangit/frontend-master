@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Form events</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<script type="text/javascript">
+	window.onload = function(){
+		var txtUsername = document.appForm.username;
+		
+		
+		var txtPassword = document.appForm.password;
+		txtPassword.onfocus = function(){
+			focusElemt(this);
+		}
+		
+		txtPassword.onblur = function(){
+			blurElemt(this);
+		}
+		
+		var txtEmail = document.appForm.email;
+		
+		txtEmail.addEventListener("focus",function(){ focusElemt(this);},false);
+		txtEmail.addEventListener("blur",function(){ blurElemt(this);},false);
+		
+	}
+	
+	function focusElemt(els){
+		els.style.setProperty("background-color","#CFC");
+	}
+	
+	function blurElemt(els){
+		els.style.removeProperty("background-color");	
+	}
+</script>
+
+</head>
+
+<body >
+	<center>
+    	<h1>Form events</h1>
+    	<h3>onblur - onchange - onfocus - onreset - onselect - onsubmit</h3>
+    </center>
+	
+    
+    <div id="boxA" class="boxA">
+    	<form name="appForm" method="post" action="process.php" enctype="multipart/form-data">
+        	<ul class="list">
+            	<li>
+                	<label>Tài khoản:</label>
+                    <input type="text" name="username" class="input txtShort" onfocus="focusElemt(this)" onblur="blurElemt(this)"/>
+                </li>
+                <li>
+                	<label>Mật khẩu:</label>
+                    <input type="text" name="password" class="input txtMedium" />
+                </li>
+                <li>
+                	<label>Email:</label>
+                    <input type="text" name="email" class="input txtMedium" />
+                </li>
+            </ul>        	
+        </form>
+    </div>
+    
+</body>
+</html>

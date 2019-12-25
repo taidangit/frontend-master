@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Form Elements</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(e) {
+			
+		$("#process").click(function(e) {
+			/*var username=$("#appForm :text[name='username']");
+			$(username).addClass("bg02");
+			$("#info").html(username.val());
+			*/
+			
+			
+			/*var password=$("#appForm :password[name='password']");
+			$(password).addClass("bg02");
+			$("#info").html(password.val());
+		*/
+		
+			
+			/*var picture=$("#appForm :file[name='picture']");
+			$(picture).addClass("bg02");
+			$("#info").html(picture.val());
+			*/
+			
+			
+			/*var skill=$("#appForm :radio[name='skill']");
+			$(skill).addClass("bg02");
+			$("#info").html($("#appForm :radio[name='skill']:checked").val());
+			*/
+			
+			/*
+			var btnSubmit=$("#appForm :submit[name='btnSubmit']");
+			$(btnSubmit).addClass("bg02");
+			$("#info").html(btnSubmit.val());
+			*/
+			
+			/*
+			var btnReset=$("#appForm :reset[name='btnReset']");
+			$(btnReset).addClass("bg02");
+			$("#info").html(btnReset.val());
+			*/
+			
+			/*var mobile=$("#appForm select[name='mobile']");
+			$(mobile).addClass("bg02");
+			$("#info").html(mobile.val());
+			*/
+			
+			
+			/*var mobile2=$("#appForm select[name='mobile2']");
+			$(mobile2).addClass("bg02");
+			$("#info").html(mobile2.val());
+			*/
+			
+			
+			/*var mobile2=$("#appForm select[name='mobile2']");
+			$(mobile2).addClass("bg02");
+			*/
+			
+			var opts=$("#appForm select[name='mobile2'] option:selected");
+			var str="";
+			$.each(opts, function(index, element) {
+                str+=$(this).val()+" ";
+            });
+			
+			$("#info").html(str);
+			
+			
+        });
+      
+    });
+	
+</script>
+
+</head>
+
+<body>
+	<center>
+    	<h1>Form elements</h1>
+    </center>
+    
+    <form id="appForm" name="appForm" class="boxA" method="post" action="" enctype="multipart/form-data">
+    	<div>
+        	Username: 
+            <input type="text" name="username" class="input" value="Khanh Pham"/>
+        </div>
+        <div>
+       		 Password: 
+             <input type="password" name="password" class="input" value="123456"/>        
+        </div>
+        
+        <div>
+        	File upload: 
+            <input type="file" name="picture" class="input"/>
+        </div>
+        
+        <div>
+        	Selectbox: 
+            <select name="mobile"> 
+                <option value="nokia">Nokia</option>
+                <option value="samsung">Samsung</option>
+                <option value="apple">Apple</option>
+                <option value="htc">HTC</option> 
+            </select>
+        </div>
+        
+        <div>
+        	Selectbox multi: 
+            <select name="mobile2" multiple="multiple"> 
+                <option value="nokia">Nokia</option>
+                <option value="samsung">Samsung</option>
+                <option value="apple">Apple</option>
+                <option value="htc">HTC</option> 
+            </select>
+        </div>
+        
+        <div>
+        	Radio group: 
+            <input type="radio" name="skill" class="input" value="html"/> HTML 
+            <input type="radio" name="skill" class="input" value="css"/> CSS 
+            <input type="radio" name="skill" class="input" value="js" checked="checked"/> JS 
+            <input type="radio" name="skill" class="input" value="jQuery"/> jQuery   
+        </div>
+        
+        <div>
+        	Buttons: 
+        	<input type="submit" name="btnSubmit" class="input" value="Submit button"/> 
+            <input type="reset" name="btnReset" class="input" value="Reset button"/>
+            <input type="button" class="button" value="Send"/>
+        </div>
+        
+    </form>
+    
+    <div id="info" class="boxA" style="min-height: 50px;"></div>
+    
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+</body>
+</html>

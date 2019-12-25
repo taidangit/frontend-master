@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<?xml-stylesheet type="text/xsl" href="07-template.xsl"?>
+
+<book_shop>
+	<book>
+		<title>Lap trinh Jquery</title>
+		<author>ZendVN Group</author>
+		<page>500</page>
+		<weight units="gam">700</weight>
+	</book>
+
+	<book>
+		<title>Lap trinh Joomla</title>
+		<author>ZendVN Group</author>
+		<page>800</page>
+		<weight units="gam">400</weight>
+	</book>
+
+	<book>
+		<title>Lap trinh PHP</title>
+		<author>ZendVN Group</author>
+		<page>1200</page>
+		<weight units="gam">1500</weight>
+	</book>
+</book_shop>

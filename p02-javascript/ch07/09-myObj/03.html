@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 03</title>
+<script type="text/javascript">
+
+	//cach 02
+	this.myvalidate2=function() {	
+		this.data="This is a test";
+		this.message="This is a test 2";
+		
+		//phuong thuc
+		this.getData=getData;
+		
+		function getData() {
+			return this.data;
+		}
+		
+		//phuong thuc
+		this.getMsg=getMsg;
+		
+		function getMsg() {
+			return this.message;
+		}
+	}
+	
+	var myObj2=new myvalidate2();
+	document.write("Type of:"+typeof myObj2+"<br/>");
+	document.write("Properties:"+myObj2.data+"<br/>");
+	document.write("Properties:"+myObj2.message+"<br/>");
+	document.write("Method:"+myObj2.getData()+"<br/>");
+	document.write("Method:"+myObj2.getMsg()+"<br/>");
+	
+</script>
+</head>
+
+<body>
+</body>
+</html>

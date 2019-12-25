@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script src="js/myCssElement.js" type="text/javascript"></script>
+<script type="text/javascript">
+ 	window.onload = function(){
+		var btnShow = document.getElementById("show");
+		var info 	= document.getElementById("info");
+		
+		var boxA 	= document.getElementById("boxA");
+		var boxB 	= document.getElementById("boxB");
+		var boxC 	= document.getElementById("boxC");
+		
+		btnShow.onclick = function(){
+			info.innerHTML = "C parent: " + boxC.offsetParent.id 
+										  + " | " + boxC.offsetParent.tagName
+							+ "<br>B parent: " + boxB.offsetParent.id
+										  + " | " + boxB.offsetParent.tagName
+							+ "<br>A parent: " + boxA.offsetParent.id
+										  + " | " + boxA.offsetParent.tagName;
+		}
+	}
+</script>
+</head>
+
+<body>
+	<div id="boxA" class="boxA" style="position: static;">
+    	BoxA (position: static)
+        <div id="boxB" class="boxB"  style="position: relative;">
+    		BoxB (position: static)
+            <div id="boxC" class="boxC"  style="position: static;">
+    			BoxC (position: static)
+    		</div>
+    	</div>
+    </div>
+    
+    <div id="info" class="info"></div>
+    <div id="move" class="move"></div>
+    
+    <center>
+    	<input type="button" class="button" id="show" value="Show Offset" />
+    </center>
+</body>
+</html>

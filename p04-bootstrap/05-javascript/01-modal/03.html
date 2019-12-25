@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 3 - Button</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+ <link href="../../less/style.less" rel="stylesheet/less">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+  <script src="../../js/less-3.9.0.min.js"></script>
+</head>
+<body>
+  	<div class="container">
+		<div class="row my-row">
+			<!-- Button show modal -->
+			<button class="btn btn-primary" data-toggle="modal" data-target=".my-modal" 
+				data-backdrop="true" data-keyboard="true" > 
+				Show modal
+			</button>
+			
+			<div data-show="false" class="modal fade my-modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" tabindex="-1">
+				<div class="modal-dialog modal-sm">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" aria-hidden="true" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Modal title</h4>
+						</div>
+						<div class="modal-body">
+							<p>One fine body&hellip;</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		 $('.my-modal').modal({
+			//backdrop	: 'static',	// backdrop	true	Đóng modal khi click chuột ở vùng ngoài modal
+			//keyboard	: true,		// keyboard	true	Đóng modal khi click vào Esc	
+			//show		: false,	// show		true	Hiển thị modal khi nó được khởi tạo
+		}) 
+	
+	</script>
+</body>
+</html>

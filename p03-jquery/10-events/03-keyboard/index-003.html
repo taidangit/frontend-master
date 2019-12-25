@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<title>Keyboard events</title>
+<script type="text/javascript">
+	/*window.onload = function(){
+		var content = document.appForm.content;
+		content.onchange = content.onkeyup = function(){
+			var charLength = document.getElementById("charLength");	
+			
+			if(content.value.length >=0){
+				content.value = content.value.substr(0,100);
+			}
+			charLength.innerText = content.value.length;
+		}
+	}*/
+	
+	$(document).ready(function(e) {
+        var content = $("#appForm textarea[name='content']");
+		
+		/*content.keyup(function(e) {
+           lengthVal(this);
+        }).change(function(e) {
+           lengthVal(this); 
+        });*/
+		
+		content.on("keyup change", function(){
+			lengthVal(this);
+		});
+		
+		
+		
+		function lengthVal(selector){
+			 if($(selector).val().length > 100){
+				$(selector).val($(selector).val().substr(0,100));
+			}
+						
+			$("#charLength").text($(selector).val().length);
+		}
+    });
+</script>
+</head>
+<body>
+	<center>
+    	<h1>Keyboard event</h1>
+    </center>
+	<form name="appForm" id="appForm" method="post" action="" enctype="multipart/form-data" class="boxA">
+    	<label>Content:</label>
+   		 <br />
+    	<textarea name="content" cols="58" rows="8" class="input"></textarea>
+   		 <br />Giới hạn là 100 ký tự 
+   		 (Số ký tự hiện thời <span id="charLength">0</span>)    
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Selectors Basic</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(e) {
+		
+		$("#process").click(function(e) {
+			
+			$("#boxA:parent").css("border", "1px solid red");
+			
+			//$("#boxA p:parent").css("border", "1px solid red");
+			
+        });
+       
+		
+    });
+	
+</script>
+
+</head>
+
+<body>
+	<center>
+    	<h1>$("has(val)");</h1>
+    </center>
+    
+    <div id="boxA" class="boxA">
+    
+    	<div class="item">
+        	<h2>1. HTML</h2>
+            <p id="tmp">
+            	HTML is a language for describing web pages. 
+                HTML stands for Hyper Text Markup Language. 
+                HTML is a markup language ...
+            </p>
+        </div>
+        
+        <div class="item">
+        	<h2>2. CSS</h2>
+            <p>
+                CSS stands for Cascading Style Sheets. 
+                Styles define how to display HTML elements. 
+                Styles were added to HTML 4.0 to solve a problem...
+            </p>
+        </div>
+        
+        <div class="item">
+        	<h2>3. JavaScript</h2>
+        	<p>
+                A scripting language is a lightweight programming language. 
+                JavaScript is programming code that can be inserted into HTML pages. 
+                JavaScript inserted into HTML pages, 
+                can be executed by all modern web browsers...
+            </p>
+        </div>
+        
+        <div class="item">
+        	<h2>4. jQuery</h2>
+        	<p> </p>
+        </div>
+    </div>
+    
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+</body>
+</html>

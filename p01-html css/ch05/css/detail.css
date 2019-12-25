@@ -1,0 +1,189 @@
+/* CSS Document */
+
+/* DETAIL - PRODUCT IMAGE
+============================================================================= */
+#box-product-detail .product-image {
+	width: 248px;
+	float:left;
+}
+
+#box-product-detail .product-image .big{
+	border: 1px solid #e5e5e5;
+	display:inline-block;
+	
+}
+
+#box-product-detail .product-image .big .scontent{
+	width: 220px;
+	height: 220px;
+	border: 5px solid #fafafa;
+	line-height: 220px;
+	text-align: center;
+	overflow: hidden;
+}
+
+#box-product-detail .product-image .big .scontent img{
+	vertical-align: middle;
+}
+
+
+#box-product-detail .product-image .small {
+	border: 1px solid #e5e5e5;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+#box-product-detail .product-image .small .scontent{
+	width: 102px;
+	height: 102px;
+	border: 5px solid #fafafa;
+	line-height: 102px;
+	text-align: center;
+	overflow: hidden;
+}
+
+#box-product-detail .product-image .share{
+	margin-top: 20px;
+}
+
+
+/* DETAIL - PRODUCT INFO
+============================================================================= */
+
+#box-product-detail .product-info {
+	margin-left: 250px;
+}
+
+#box-product-detail .product-info .title{
+	position: relative;
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+#box-product-detail .product-info .title a{
+	position: absolute;
+	top: 18px;
+	right: 25px;
+}
+
+#box-product-detail .product-info .desc {
+	padding: 25px 0px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+/* DETAIL - PRODUCT INFO - PRICE
+============================================================================= */
+
+#box-product-detail .product-info .price {
+	height: 180px;
+	border: 1px solid #e5e5e5;
+	background-color: #fcfcfc;
+	margin-top: 10px;
+	padding: 20px;
+}
+
+#box-product-detail .product-info .price .rating span.star {
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+#box-product-detail .product-info .price .rating span.text {
+	display: block;
+	height: 25px;
+	line-height: 25px;
+}
+
+
+#box-product-detail .product-info .price .detail {
+	margin-top: 20px;
+	position: relative;
+}
+
+#box-product-detail .product-info .price .detail p{
+	line-height: 25px;
+	font-size: 13px;
+}
+
+#box-product-detail .product-info .price .detail span.normal{
+	font-size: 10px;
+}
+
+#box-product-detail .product-info .price .detail span.special{
+	font-size: 24px;
+	color: #447f11;
+	font-weight: bold;
+	vertical-align: bottom;
+}
+
+#box-product-detail .product-info .price .detail span.delete{
+	text-decoration: line-through;
+}
+
+/* DETAIL - PRODUCT INFO - PRICE - CONTROL
+============================================================================= */
+
+#box-product-detail .product-info .price .detail p.control {
+	position: absolute;
+	top: 25px;
+	right: 0px;
+}
+
+#box-product-detail .product-info .price .detail p.control input[type=text]{
+	width: 40px;
+	height: 20px;
+	text-align: center;
+}
+
+#box-product-detail .product-info .price .detail p.control input[type=button]{
+	width: 20px;
+	height: 20px;
+}
+
+/* DETAIL - PRODUCT INFO - PRICE - BUTTON
+============================================================================= */
+
+#box-product-detail .product-info .price .button {
+	margin-top: 20px;
+	position: relative;
+}
+
+#box-product-detail .product-info .price .button a.question{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	color: #000;
+}
+
+#box-product-detail .product-info .price .button a.question:hover{
+	text-decoration: underline;
+}
+
+/* DETAIL - PRODUCT INFO - PRICE - SHARE LINK
+============================================================================= */
+
+#box-product-detail .product-info .share-link {
+	margin-top: 20px;
+	text-align: right;
+	
+}
+
+
+
+/* DETAIL - PRODUCT TAB
+============================================================================= */
+
+#box-product-detail .product-tab {
+}
+
+#box-product-detail .product-tab .next-product{
+	margin-top: 20px;
+	float: right;
+	
+}
+
+#box-product-detail .product-tab .back{
+	margin-top: 20px;
+	float: left;
+}

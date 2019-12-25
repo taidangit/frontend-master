@@ -1,0 +1,41 @@
+/* CSS Document */
+
+*{
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.left {
+	float: left;
+}
+
+.boxA {
+	width: 500px;
+	border: solid 3px #F00;
+	padding: 10px;
+	margin: 20px auto;
+	overflow-x: hidden;
+	height: 250px;
+}
+
+.item {
+	border:1px solid #999;
+	margin-bottom:5px;
+	padding:5px;
+}
+
+.clr {
+	clear:both;
+}
+
+.button {
+	font-size:12px;
+	padding:3px;
+	border:2px solid #666;
+}
+
+
+
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Form events</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	/*function getVal(obj){
+		var info = document.getElementById("info");
+		if(window.getSelection){//Chrome
+			var activeElemt = document.activeElement;
+			
+			if(activeElemt.tagName == "TEXTAREA" || activeElemt.tagName == "INPUT"){
+				var txt 		= document.activeElement.value;
+				var startPos 	= document.activeElement.selectionStart;
+				var endPos 		= document.activeElement.selectionEnd;
+				var valText 	= txt.substring(startPos,endPos)
+				
+			}
+		}else{
+			if(document.selection.createRange){
+				var range = document.selection.createRange();
+				
+				var valText = range.text;
+			}
+		}
+		
+		info.innerHTML =  "Select string: " + valText;
+	}*/
+	
+	$(document).ready(function(e) {
+        var content = $("#appForm textarea[name='content']");		
+		
+		content.select(function(e) {
+           //	$("#info").text("Da co du lieu trong textarea duoc chon lua");
+			
+			var txt			= $(this).val();
+			console.log(txt);
+			
+			var startPos	= $(this)[0].selectionStart;
+			console.log(startPos);
+			
+			var endPos		= $(this)[0].selectionEnd;
+			console.log(endPos);
+			
+			var valText 	= txt.substring(startPos,endPos)
+			$("#info").text(valText);
+		  
+        });
+    });
+	
+</script>
+
+</head>
+
+<body>
+	<center>
+    	<h1>Form events</h1>
+    	<h3>onblur - onchange - onfocus - onreset - onselect - onsubmit</h3>
+    </center>
+	
+    
+    <div id="info" class="boxA"></div>
+    
+    <div id="boxA" class="boxA">
+    	<form name="appForm" id="appForm" method="get" action="process.php" enctype="multipart/form-data" >
+        	<ul class="list">
+             	<li>  
+                	<label>Content:</label>              	
+                    <textarea name="content" rows="6" cols="58" class="input">Phan DOM cua javascript thi qua nhieu va phuc tap</textarea>
+                </li>
+               
+               
+            </ul>        	
+        </form>
+    </div>
+    
+</body>
+</html>
+

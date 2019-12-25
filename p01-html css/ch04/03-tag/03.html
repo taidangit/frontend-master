@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tab 03</title>
+<style type="text/css">
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.clr {
+		clear: both;
+	}
+	
+	#tabC {
+		width: 600px;
+		border: 2px solid #F00;
+		margin: 30px auto;
+		padding: 10px;
+	}
+	
+	#tabC .tabs{
+		list-style: none;
+		display: inline-block;
+	}
+	
+	#tabC .tabs li{
+		float: left;
+		margin-right: 2px;
+	}
+	
+	#tabC .tabs li a{
+		text-decoration: none;
+		display: block;
+		background: url(images/tabC/tabB-rbg.png) right top no-repeat;
+		padding-right: 6px;
+	}
+	
+	#tabC .tabs li span{
+		background: url(images/tabC/tabB-lbg.png) left top no-repeat;
+		display: block;
+		padding: 2px 0px 0px 6px;
+	}
+
+	#tabC .tabs li a:hover, #tabC .tabs li a.current{
+		background: url(images/tabC/tabB-rbg-active.png) right top no-repeat;
+	}
+	
+	#tabC .tabs li a:hover span, #tabC .tabs li a.current span{
+		background: url(images/tabC/tabB-lbg-active.png) left top no-repeat;
+	}
+	
+	#tabC .box-wrapper{
+		border: 1px solid #666;
+		height: 140px;
+		text-align: justify;
+		/* *margin-top: -10px; IE7 only*/
+	}
+	
+	#tabC .box-wrapper .tab-box{
+		display: none;
+		padding: 10px;
+	}
+	
+	#tabC .box-wrapper .current{
+		display: block;
+	}
+</style>
+
+
+</head>
+
+<body>
+	<div id="tabC">
+    	<ul class="tabs">
+        	<li><a href="#"><span>PHP Script</span></a></li>
+            <li><a href="#"><span>ASP Script</span></a></li>
+            <li><a href="#" class="current"><span>JSP Script</span></a></li>
+        </ul>
+        
+        <div class="box-wrapper">
+        	<div class="tab-box">
+            	PHP script. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+            <div class="tab-box ">
+            	ASP script. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+            <div class="tab-box current">
+            	JSP script. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

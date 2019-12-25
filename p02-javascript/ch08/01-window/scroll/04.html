@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 04</title>
+<script type="text/javascript">
+
+	var process;
+	var delay=50;
+	var scrollAmount=20;
+	
+	function getYOffset() {
+		var yOffset=(typeof(window.pageYOffset)!="number") ? document.documentElement.scrollTop : window.pageYOffset;
+		return yOffset;
+	}
+	
+	function animateScroll() {
+		window.scrollBy(0, scrollAmount);
+		var yOffset=getYOffset();
+		
+		if(yOffset >= document.body.scrollHeight) {
+			clearInterval(process);
+			
+		} 
+	}
+	
+	function goBottom() {
+		
+		process=setInterval("animateScroll()", delay);
+	}
+	
+	
+</script>
+
+<style type="text/css">
+	*{
+		margin:0px;
+		padding:0px;
+	}
+	
+	.content {
+		width:400px;
+		margin:10px auto;
+		text-align:center;
+	}
+	
+	.content .box {
+		height::300px;
+		background-color:#0F9;
+		line-height:300px;
+		
+		margin-bottom:10px;
+		font-size:20px;
+	}
+	
+	.content a{
+		font-size:20px;
+		text-decoration:none;
+		display:inline-block;
+		background-color:#C33;
+		padding:3px 8px;
+		margin-bottom:10px;
+		color:#FFF;
+	}
+	
+	
+	
+</style>
+</head>
+
+<body>
+	<div class="content">
+    	<a href="javascript:goBottom();">Go to bottom</a>
+    	<div class="box">Box 01</div>
+        <div class="box">Box 02</div>
+        <div class="box">Box 03</div>
+        <div class="box">Box 04</div>
+        <div class="box">Box 05</div>
+        <div class="box">Box 06</div>
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 04</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript">
+
+	function getInfo(obj) {
+		var val=obj.value;
+		var txtCode=document.appForm.code;
+		var optSelected=obj.options[obj.selectedIndex];
+		
+		
+		txtCode.value=val+" | "+optSelected.text;
+		
+	}
+	
+	
+	
+</script>
+</head>
+	
+<body>
+	<h1>Form Event</h1>
+    <div id="boxA" class="boxA">
+    
+    	<form name="appForm" method="post" action="process.php" enctype="multipart/form-data">
+        	<ul class="list">
+            	<li>
+                	<label>City:</label>
+                    <select name="city" onchange="getInfo(this)" class="input txtShort">
+                    	<option value="hcm">Ho Chi Minh City</option>
+                        <option value="hn">Ha Noi City</option>
+                        <option value="dn">Da Nang City</option>
+                        <option value="ct">Can Tho City</option>
+                    </select>
+                </li>
+                
+                <li>
+                	<label>Value: </label>
+                    <input type="text" name="code" class="input txtShort"/>
+                </li>
+               
+            </ul>
+        </form>
+    </div>
+</body>
+</html>

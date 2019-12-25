@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 10</title>
+<script type="text/javascript">
+	//SPLICE
+	var arr=["HTML", "CSS", "ABC", "Javascript"];
+			//0        1       2
+			//-3       -2      -1
+	
+	document.write("input:"+arr+"<br/>");
+	
+	
+	//document.write("SPLICE(1,1):"+arr.splice(-3, 3)+"<br/>");
+	
+	document.write("SPLICE(1,1):"+arr.splice(1, 2, "A", "B", "C")+"<br/>");//xoa 2 phan tu tu vi tri 1
+	
+	document.write("output:"+arr+"<br/>");
+
+</script>
+
+</head>
+
+<body>
+</body>
+</html>

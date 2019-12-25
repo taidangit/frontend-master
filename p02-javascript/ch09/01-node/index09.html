@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/01.css" />
+<script type="text/javascript" src="js/functions.js"></script>
+<script type="text/javascript">
+
+	window.onload = function() {
+		var boxA = document.getElementById("boxA");
+		var elemts = getElementByClassName(boxA,"content"); //Not NodeList
+		 
+		for(var i=0; i<elemts.length; i++){
+			console.log(elemts[i]);
+			elemts[i].style.color = "red";
+		}
+	}
+
+</script>
+</head>
+
+<body>
+	 <div id="boxA" class="boxA" style="margin: 20px auto;">
+        <h1 class="title">Thuộc tính của NODE</h1>
+        <p class="content">Lorem ipsum dolor sit amet... consequat.</p>
+        <div class="author">ZendVN group</div>
+        <div class="abc content">www.zend.vn</div>
+    </div>
+    <div id="abc" class="content"> DIV class=abc</div>
+    <div id="bef" class="content"> DIV class=abc</div>
+</body>
+</html>

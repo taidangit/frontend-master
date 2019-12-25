@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+
+<script type="text/javascript">
+
+	window.onload=function() {
+		var btnProcess = document.getElementById("process");
+		btnProcess.onclick = function(){
+			
+			if(window.XMLHttpRequest){
+				var xhttp = new XMLHttpRequest();	
+			}else{ //ie5 - ie6
+				var xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			
+			
+			var user = document.appForm.username.value;
+			var pwd = document.appForm.password.value;
+			console.log(user + " | " + pwd);
+			var params = "username=" + user + "&password=" + pwd;
+			console.log(params);
+			
+			xhttp.open("POST","files/005.php", true);
+			xhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");	
+			
+			//Gửi yêu cầu đến máy chủ
+			xhttp.send(params);
+			console.log(xhttp);
+			
+			xhttp.onreadystatechange = function(){
+				if(xhttp.readyState == 4 && xhttp.status == 200){
+					var xmlDOM = xhttp.responseXML;
+					var flag = xmlDOM.getElementsByTagName("flag")[0].childNodes[0].nodeValue;			
+					var msg = "";
+					if(flag == "error"){
+						msg = xmlDOM.getElementsByTagName("msg")[0].childNodes[0].nodeValue;
+					}else{
+						msg = "Các bạn đã đăng nhập thành công";
+					}
+					
+					var boxA = document.getElementById("boxA");
+					boxA.innerHTML = msg;
+				}
+			}
+			
+		}
+	}
+
+</script>
+</head>
+
+<body>
+
+	<div id="boxA" class="boxA">
+    </div>
+    
+    <div id="form" class="boxA">
+    	<form name="appForm" id="appForm" method="post" enctype="multipart/form-data">
+        	<div>
+            	Username:
+                <input type="text" name="username" class="input" />
+            </div>   
+            <div>
+            	Password:
+                <input type="password" name="password" class="input" />
+            </div> 
+            <div>
+    			<input type="button" id="process" name="process" class="button" value="Process" />
+    		</div>
+        </form>
+    </div>
+</body>
+</html>

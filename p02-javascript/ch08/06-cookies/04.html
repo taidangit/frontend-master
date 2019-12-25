@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 04</title>
+<script type="text/javascript" src="js/cookie.js"></script>
+</head>
+
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	p {
+		margin: 10px;
+	}
+	#result {
+		color: #F00;
+		font-weight: bold;
+	}
+</style>
+<body>
+	<p>Tổng số lần truy cập website của bạn: <span id="result">1</span></p>
+    
+    <script type="text/javascript">
+	
+		var cValue = getCookie("counter");
+		
+		if(cValue == null){
+			cValue = 1;
+		} else{
+			cValue = Number(cValue) + 1;
+		}
+		
+		createCookie("counter",cValue);
+		document.getElementById("result").innerHTML  = cValue;
+		
+	</script>
+</body>
+</html>

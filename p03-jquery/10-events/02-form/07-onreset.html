@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Form events</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<script type="text/javascript">
+	function confirmReset(){
+		var val = confirm("Ban co chac chan reset lai form hay khong?");
+		return val;
+	}
+</script>
+
+</head>
+
+<body >
+	<h1>Form events</h1>
+    <h3>onblur - onchange - onfocus - onreset - onselect - onsubmit</h3>
+    
+    <div id="boxA" class="boxA">
+    	<form name="appForm" method="get" action="process.php" enctype="multipart/form-data" onreset="return confirmReset();">
+        	<ul class="list">
+             	<li>  
+                	<label>Keywords:</label>              	
+                    <input type="text" name="keywords" value="" class="input txtMedium" />
+                </li>
+                <li>  
+                	<label>Search engine:</label>              	
+                    <input type="radio" name="engine" value="none" /> None
+                    <input type="radio" name="engine" value="google" /> Google
+                    <input type="radio" name="engine" value="yahoo" /> Yahoo
+                    <input type="radio" name="engine" value="bring" /> Bring
+                </li>
+                <li>                	
+                    <input type="reset" name="reset" value="Reset form" class="input" />
+                </li>
+               
+            </ul>        	
+        </form>
+    </div>
+    
+</body>
+</html>

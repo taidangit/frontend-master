@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 02</title>
+<script type="text/javascript">
+
+	function showMessage(user) {
+		document.write("Xin chao <strong>"+user+"</strong> da ghe tham dien dan cua chung toi<br/>");
+	}
+	/*	
+	var user1="Nguyen Van A";
+	var user2="Nguyen Van B";
+	var user3="Nguyen Van C";
+	
+	showMesaage(user1);
+	showMesaage(user2);
+	showMesaage(user3);
+	*/
+	
+	function callShowMessage() {
+		showMessage("Nguyen Van B");
+	}
+</script>
+
+</head>
+
+<body>
+	<a href="#" onclick="callShowMessage();">Xin chao</a>
+</body>
+</html>

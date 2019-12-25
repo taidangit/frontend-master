@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/01.css" />
+<script type="text/javascript" src="js/functions.js"></script>
+<script type="text/javascript">
+
+	
+	function checkChilds() {
+		var boxA = document.getElementById("boxA");
+		console.log(boxA.hasChildNodes());
+		
+		var boxB = document.getElementById("boxB");
+		console.log(boxB.hasChildNodes());
+		
+		var boxC = document.getElementById("boxC");
+		console.log(boxC.hasChildNodes());
+		
+	}
+
+</script>
+</head>
+
+<body>
+	<input id="copy" type="button" value="kiem tra node con" onclick="checkChilds();" />
+    
+    <div id="boxA" class="boxA"></div>
+    <div id="boxB" class="boxB">Box B</div>
+    <div id="boxC" class="boxC" >
+    	<p>p tag</p>
+    </div>
+    
+	
+    
+    
+	 
+</body>
+</html>

@@ -1,0 +1,14 @@
+/* CSS Document */
+#uploadForm{
+	width: 500px;
+	border: solid 2px #F00;
+	margin: 20px auto;
+	padding: 30px;	
+}
+
+.row{
+	width: 80%;
+	padding: 2px;
+	margin-bottom: 2px;
+	border: solid 2px #CCC;
+}

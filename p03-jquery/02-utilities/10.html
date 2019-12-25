@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jquery Basic</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(e) {
+		
+		var a, b;
+		
+		a=[300, "Jquery", 400, "HTML", 500, "JS", 600, "Jquery"];
+		b="This is a test";
+		
+		
+		$("#process").click(function(e) {
+			
+			a={};
+			b={title: "jquery master"};
+			console.log($.isEmptyObject(a)+" "+$.isEmptyObject(b));
+			
+		});
+		
+		
+		
+    });
+	
+	
+	
+</script>
+
+</head>
+
+<body>
+	<h1 style="text-align:center;">jQuery.isEmptyObject()</h1>
+    
+    <div id="boxA" class="boxA">
+    	<div class="item">1.HTML</div>
+        <div class="item">2.CSS</div>
+        <div class="item">3.JS</div>
+        <div class="item">4.JQuery</div>
+    </div>
+    
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Exercise 01</title>
+<link rel="stylesheet" type="text/css" href="css/style02.css"/>
+<script type="text/javascript">
+
+	 function moveR(){
+		
+		var boxA = document.getElementById("boxA");
+		
+		var firstNode = boxA.firstChild;
+		if(firstNode.nodeName == "#text"){
+			firstNode = firstNode.nextSibling;	
+			//Xoa node Text o truoc node firstNode
+			var nodeText = firstNode.previousSibling;
+			boxA.removeChild(nodeText);
+		}
+		console.log(firstNode);
+		
+		var boxB = document.getElementById("boxB");
+		
+		boxB.appendChild(firstNode);
+		 
+		var childBoxB=boxB.childNodes;
+		
+		for(var i=0;i<childBoxB.length;i++) {
+			if(i%2==0) {
+				childBoxB.item(i).style.backgroundColor = "#FCC";
+			} else {
+				childBoxB.item(i).style.backgroundColor = "#CFF";
+			}
+		}
+		 
+	 }
+	 
+	 function moveL(){
+		var boxB = document.getElementById("boxB");
+		
+		var lastNode = boxB.lastChild;
+		if(lastNode.nodeName == "#text"){
+			lastNode = lastNode.previousSibling;	
+			//Xoa node Text o truoc node firstNode
+			var nodeText = lastNode.nextSibling;
+			boxB.removeChild(nodeText);
+		}
+		
+		var boxA = document.getElementById("boxA");
+		lastNode.style.backgroundColor = "";
+		var childsBoxA = boxA.childNodes;
+		
+		var firstNodeBoxA = boxA.firstChild;
+		boxA.insertBefore(lastNode,firstNodeBoxA);
+		
+		 
+		 
+	 }
+</script>
+</head>
+
+<body>
+	<div id="main">
+    	<!---------------BOX A-------------->
+        <div id="boxA" class="box fLeft">
+        	<div class="row">1. Laptop</div>
+            <div class="row">2. iPhone</div>
+            <div class="row">3. Nokia</div>
+            <div class="row">4. Samsung</div>
+            <div class="row">5. Tablet</div>
+        </div>
+        
+        <!---------------CONTROL-------------->
+        <div id="control" class="fLeft">
+        	<p><button type="button" id="moveR" onclick="moveR();">Move right</button></p>
+          	
+           	<p><button type="button" id="moveL" onclick="moveL();">Move left</button></p>
+        </div>
+        
+        <!---------------BOX B-------------->
+        <div id="boxB" class="box fLeft"></div>
+	</div>
+
+
+</body>
+</html>

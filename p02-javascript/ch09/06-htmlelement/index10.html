@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 10</title>
+<script type="text/javascript" src="js/functions.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/myCssElement2.js"></script>
+<script type="text/javascript">
+		
+	window.onload=function() {
+		var btnProcess=document.getElementById("process");
+		
+		//btnProcess.attachEvent("onclick", function(){alert("Hello Obama!")});//IE
+		
+		if(typeof(btnProcess.addEventListener) == "function") {
+			btnProcess.addEventListener("click", process, false);
+		} else {
+			btnProcess.attachEvent("onclick", process);//only IE
+		}
+		
+		
+		var btnReset=document.getElementById("reset");
+		if(typeof(btnReset.addEventListener) == "function") {
+			btnReset.addEventListener("click", resetBgColor, false);
+		} else {
+			btnReset.attachEvent("onclick", resetBgColor);
+		}
+		
+		var btnRemove=document.getElementById("remove");
+		if(typeof(btnRemove.addEventListener) == "function") {
+			btnRemove.addEventListener("click", removeEvent, false);
+		} else {
+			btnRemove.attachEvent("onclick", removeEvent);
+		}
+	}
+	
+	function process() {
+		var boxA=document.getElementById("boxA");
+		var element=boxA.children;
+		for(var i=0;i<element.length;i++) {	
+		
+			if(i%2==0) {
+				element[i].style.backgroundColor="#FCF";
+			} else {
+				element[i].style.backgroundColor="#CFC"
+			}
+		}
+		
+	}
+	
+	function resetBgColor() {
+		var boxA=document.getElementById("boxA");
+		var element=boxA.children;
+		for(var i=0;i<element.length;i++) {	
+			var objHTML=element[i];
+			if(typeof(objHTML.style.removeProperty)=="function"){
+				objHTML.style.removeProperty("background-color");
+			} else {
+				objHTML.style.removeAttribute("background-color");
+			}
+		} 
+	}
+	
+	function removeEvent() {
+		var btnProcess=document.getElementById("process");
+		if(typeof(btnProcess.removeEventListener)=="function") {
+			btnProcess.removeEventListener("click", process, false);
+		} else {
+			btnProcess.dettachEvent("onclick", process);
+		}
+	}
+	
+	
+</script>
+<style type="text/css">
+	
+</style>
+</head>
+
+<body>
+	<div id="boxA" class="boxA">
+    	<div>1.HTML</div>
+        <div>2.CSS</div>
+        <div>3.JS</div>
+        <div>4.JQUERY</div>
+     
+    </div>
+    
+    <center>
+    	 <input class="button" type="button" value="process" id="process" />
+          <input class="button" type="button" value="reset" id="reset" onclick="reset();"/>
+           <input class="button" type="button" value="remove event" id="remove" onclick="removeEvent();"/>
+    </center>
+   
+    
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 3 - Button</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+ <link href="../../less/style.less" rel="stylesheet/less">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+  <script src="../../js/less-3.9.0.min.js"></script>
+</head>
+<body>
+  	<div class="container">
+			<div class="row my-row">
+			<ul class="nav nav-pills">
+				<li><a href="#home" data-toggle="tab">Home</a></li>
+				<li class="active" ><a href="#profile" data-toggle="tab">Profile</a></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" href="#" data-toggle="dropdown" >
+						Dropdown <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#dropdown-abc-1" data-toggle="tab">ABC 1</a></li>
+						<li><a href="#dropdown-abc-2" data-toggle="tab">ABC 2</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div id="myTabContent" class="tab-content">
+				<div class="tab-pane fade" id="home">
+					<p><b>Home</b> Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+				</div>
+				<div class="tab-pane fade active in" id="profile">
+					<p><b>Profile</b> Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+				</div>
+				<div class="tab-pane fade" id="dropdown-abc-1">
+					<p><b>Dropdown ABC 1</b> Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+				</div>
+				<div class="tab-pane fade " id="dropdown-abc-2">
+					<p><b>Dropdown ABC 2</b> Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 14</title>
+<link rel="stylesheet" type="text/css" href="css/style-014.css"/>
+<script type="text/javascript" src="js/moveElement.js"></script>
+
+<script type="text/javascript">
+
+	window.onload=function() {
+		var boxA=document.getElementById("boxA");
+		var xBoxA=boxA.offsetLeft;//diem goc
+		var yBoxA=boxA.offsetTop;
+		
+		console.log(xBoxA+"|"+yBoxA);
+		
+		var xPointB=800;//diem di chuyen den
+		var yPointB=150;
+		
+		var positionObj={xA: xBoxA, yA: yBoxA, xB: xPointB, yB: yPointB};
+		
+		
+		
+		var btnMove=document.getElementById("move-box");
+		var moveObj=new moveElement(positionObj);
+		btnMove.onclick=function() {
+			
+			moveObj.setMoveSize(5);
+			moveObj.setSpeed(50);
+			moveObj.run(boxA);
+		}
+		
+		var btnStop=document.getElementById("stop-box");
+		btnStop.onclick=function() {
+		
+			moveObj.stopMove();
+		}
+		
+	}
+	
+</script>
+</head>
+
+<body>
+	<h1 style="text-align:center;">Events</h1>
+    <div class="boxA" id="parentA" style="height:250px;">
+    	<div id="boxA" class="boxA2">Box A</div>
+    </div>
+    
+    <center>
+    	<input type="button" id="move-box" value="box move" class="button"/>
+        <input type="button" id="stop-box" value="stop move" class="button"/>
+    
+    </center>
+    
+    
+</body>
+</html>

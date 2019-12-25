@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 3 - Button</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+ <link href="../../less/style.less" rel="stylesheet/less">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+  <script src="../../js/less-3.9.0.min.js"></script>
+  
+  <script type="text/javascript">
+		function closeAlert(){
+			$(".alert").alert("close");
+		}
+	</script>
+ 
+</head>
+<body>
+  	<div class="container">
+		<div class="row my-row">
+			<div class="alert alert-danger fade in">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<h4>Oh snap! You got an error!</h4>
+				<p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+				<p>
+					<button type="button" class="btn btn-danger">Take this action</button>
+					<button type="button" class="btn btn-default" onclick="javascript:closeAlert();">Close</button>
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jquery Basic</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	//1 jQuery(HTML object)
+	//2 jQuery(selectors)
+	$(document).ready(function(e) {
+		//1 jQuery(HTML object)
+        //var boxA=document.getElementById("boxA");
+		//console.log(boxA+" ");            //HTMLDivEleement
+		//jQuery(boxA).css("border-color", "blue");
+		
+		//2 jQuery(selectors)
+		//$("#boxA").css("border-color", "green");
+		
+		//3 jQuery(HTML string)
+		var str='<span style="color:red; font-size: 20px;">jquery basic</span>';
+		//$("#boxA").html(str);
+		$(str).appendTo("#boxA");
+		
+		//4 jQuery(HTML string, Attribute object)
+		//$("<div></div>", {"class": "bg01", text: "jquery master"}).appendTo("#boxA");
+		
+		
+    });
+</script>
+
+</head>
+
+<body>
+	<h1 style="text-align:center;">jQuery(val)</h1>
+    
+    <div id="boxA" class="boxA"></div>
+</body>
+</html>

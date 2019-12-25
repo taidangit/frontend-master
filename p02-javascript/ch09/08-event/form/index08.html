@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 08</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript">
+
+	function getVal(obj) {
+		var boxInfo=document.getElementById("info");
+		if(window.getSelection()) { //Chrome
+			var activeEle=document.activeElement;
+			if(activeEle.tagName=="TEXTAREA" || activeEle.tagName=="INPUT") {
+				var txt=document.activeElement.value;
+				var startPos=document.activeElement.selectionStart;
+				var endPos=document.activeElement.selectionEnd;
+				var valText=txt.substring(startPos, endPos);
+				
+			}
+		} else { //IE
+			if(document.selection.createRange) {
+				var range=document.selection.createRange;
+				var valText=range.text;
+			}
+		}
+		
+		boxInfo.innerHTML="Select string: "+valText;
+	}
+	
+	
+</script>
+</head>
+	
+<body>
+	<h1>Form Event</h1>
+    <div id="boxA" class="boxA">
+    
+    	<form name="appForm" method="get" action="process.php" enctype="multipart/form-data">
+        	<ul class="list">
+                <li>
+					<label>Content:</label>                
+                    <textarea name="content" rows="6" cols="58" class="input" onselect="getVal(this);">Phan dom cua javascript qua nhieu va phuc tap</textarea>
+                </li>
+               
+            </ul>
+        </form>
+    </div>
+    <div id="info" class="boxA"></div>
+</body>
+</html>
